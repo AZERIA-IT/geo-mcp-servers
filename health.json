@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-10-09",
+  "checked": "2026-10-11",
   "servers": {
     "https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403": {
       "status": "hosted"
@@ -164,7 +164,7 @@
     },
     "https://github.com/david-pivonka/google-maps-mcp-server": {
       "pushed": "2025-10",
-      "status": "active"
+      "status": "stale"
     },
     "https://github.com/dirkhh/adsb-mcp-server": {
       "pushed": "2025-11",
@@ -361,6 +361,9 @@
       "status": "hosted"
     },
     "https://techcommunity.microsoft.com/blog/microsoft-planetary-computer-blog/introducing-microsoft-planetary-computer-pro-model-context-protocol-tools-on-vs-/4522346": {
+      "status": "hosted"
+    },
+    "https://terra-lab.ai/mcp": {
       "status": "hosted"
     },
     "https://vexceldata.com/platform/vexcel-mcp/": {

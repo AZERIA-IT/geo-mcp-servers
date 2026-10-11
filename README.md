@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**99 servers tracked** across 11 categories.
+**100 servers tracked** across 11 categories.
 
-_Health checked 2026-10-09 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 17 · ⚪ hosted 18 · ⏳ pending 2._
+_Health checked 2026-10-11 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 19 · ⏳ pending 2._
 
 
-_Access: 🟩 open 46 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
+_Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 44 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -45,7 +45,7 @@ _Access: 🟩 open 46 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (16)
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
-- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (6)
+- [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (5)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (7)
@@ -90,7 +90,7 @@ _Access: 🟩 open 46 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official | 🟦 commercial | 🟡 stale |
 | [GIS Cloud MCP Server](https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/) | Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools | — | GIS Cloud | official | 🟦 commercial | ⚪ hosted |
 | [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟦 commercial | 🟢 active |
-| [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟦 commercial | 🟢 active |
+| [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟦 commercial | 🟡 stale |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community | 🟦 commercial | 🟢 active |
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official | 🟦 commercial | 🟢 active |
 | [MapQuest MCP](https://developer.mapquest.com/documentation/mcp/) | Official MapQuest Location Intelligence Suite — geocoding, routing, place search, traffic & truck-safe routing profiles | — | MapQuest | official | 🟦 commercial | ⚪ hosted |
@@ -170,6 +170,7 @@ _Access: 🟩 open 46 · 🟨 free 3 · 🟦 commercial 44 · 🟥 paywalled 6._
 | [Geospatial Power Pack (Kiro)](https://github.com/aws-samples/sample-geospatial-kiro-power-pack) | 19 modular MCP servers with a Kiro hub power — STAC/vector/geocoding connectors, CRS/geometry/raster/point-cloud/3D processing, H3/S2 indexing, and GeoAI embeddings & similarity search over open data on AWS | Python | AWS | official | 🟩 open | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python | mahdin75 | community | 🟩 open | 🟢 active |
 | [MapSmith](https://github.com/mapsmith-ai/MapSmith) | Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output | Python | mapsmith-ai | community | 🟩 open | 🟢 active |
+| [TerraLab MCP](https://terra-lab.ai/mcp) | Hosted geospatial tools on open data — geocoding, coordinate conversion, elevation/contours, open map-data extracts, GIS file reading/conversion & French cadastral parcels, each result naming its sources & licences | — | TerraLab | official | 🟨 free | ⚪ hosted |
 
 ### Geospatial data access & catalogs
 

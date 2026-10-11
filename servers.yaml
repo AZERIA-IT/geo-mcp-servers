@@ -99,6 +99,18 @@ servers:
     transport: stdio
     tags: [geoprocessing, provenance, duckdb, whitebox, geopandas]
     added: 2026-08-23
+  - name: TerraLab MCP
+    access: free
+    url: https://terra-lab.ai/mcp
+    description: "Hosted geospatial tools on open data — geocoding, coordinate conversion, elevation/contours, open map-data extracts, GIS file reading/conversion & French cadastral parcels, each result naming its sources & licences"
+    category: toolkit
+    author: TerraLab
+    official: true
+    transport: hosted
+    vendor_domain: terra-lab.ai
+    tags: [geocoding, elevation, file-conversion, french-parcels, open-data]
+    note: "free, no-auth Streamable HTTP endpoint https://mcp.terra-lab.ai/mcp (verified 2026-10-11); client config/docs at github.com/TerraLabAI/mcp (MIT)"
+    added: 2026-10-11
 
   # ---- Desktop & enterprise GIS ----
   - name: qgis_mcp
