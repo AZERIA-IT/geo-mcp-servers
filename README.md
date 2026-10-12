@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**100 servers tracked** across 11 categories.
+**101 servers tracked** across 11 categories.
 
 _Health checked 2026-10-11 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 19 · ⏳ pending 2._
 
 
-_Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 44 · 🟥 paywalled 6._
+_Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 45 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 44 · 🟥 paywalled 6._
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (5)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (6)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (7)
 
@@ -176,6 +176,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 44 · 🟥 paywalled 6._
 
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
+| [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Live data layer for data-center site selection — its Data Center Power Index (DCPI) is a daily score of where data centers can get grid power across 300+ markets, plus grid, fiber, gas and interconnection-queue data; remote MCP at https://dchub.cloud/mcp | JavaScript | DC Hub | official | 🟦 commercial | — |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |
