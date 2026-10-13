@@ -1074,3 +1074,17 @@ servers:
     tags: [3d-globe, cesium, adsb, ais, satellites, earthquakes, cctv, osint]
     note: MCP server ships inside the app — run the local web app (npm run dev) and point server/mcp/stdio.js at it; most layers keyless, some (vessels, Google 3D, TomTom) need a provider key
     added: 2026-10-09
+  - name: DC Hub
+    access: commercial
+    url: https://github.com/azmartone67/dchub-mcp-server
+    description: "Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data"
+    category: data_access
+    author: DC Hub
+    language: JavaScript
+    official: true
+    vendor_orgs: [azmartone67]
+    vendor_domain: dchub.cloud
+    transport: http
+    tags: [data-centers, site-selection, power-grid, fiber, energy, interconnection-queue]
+    note: remote MCP at https://dchub.cloud/mcp (streamable HTTP); keyless free tier, optional API key for higher limits
+    added: 2026-10-12
