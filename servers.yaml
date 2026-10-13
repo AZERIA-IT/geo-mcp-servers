@@ -1077,12 +1077,14 @@ servers:
   - name: DC Hub
     access: commercial
     url: https://github.com/azmartone67/dchub-mcp-server
-    description: "Live data layer for data-center site selection — its Data Center Power Index (DCPI) is a daily score of where data centers can get grid power across 300+ markets, plus grid, fiber, gas and interconnection-queue data; remote MCP at https://dchub.cloud/mcp"
+    description: "Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data"
     category: data_access
     author: DC Hub
     language: JavaScript
     official: true
     vendor_orgs: [azmartone67]
+    vendor_domain: dchub.cloud
     transport: http
     tags: [data-centers, site-selection, power-grid, fiber, energy, interconnection-queue]
+    note: remote MCP at https://dchub.cloud/mcp (streamable HTTP); keyless free tier, optional API key for higher limits
     added: 2026-10-12
