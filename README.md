@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **101 servers tracked** across 11 categories.
 
-_Health checked 2026-10-11 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 19 · ⏳ pending 2._
+_Health checked 2026-10-13 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 18 · ⚪ hosted 19 · ⏳ pending 2._
 
 
 _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 45 · 🟥 paywalled 6._
@@ -176,7 +176,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 45 · 🟥 paywalled 6._
 
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript | DC Hub | official | 🟦 commercial | — |
+| [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript | DC Hub | official | 🟦 commercial | 🟢 active |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |
