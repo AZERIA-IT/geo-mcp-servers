@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **102 servers tracked** across 12 categories.
 
-_Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 20 · ⏳ pending 2._
+_Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 20 · ⏳ pending 2 · 🔴 archived 1._
 
 
 _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
@@ -90,7 +90,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official | 🟦 commercial | ⚪ hosted |
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official | 🟦 commercial | 🟡 stale |
 | [GIS Cloud MCP Server](https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/) | Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools | — | GIS Cloud | official | 🟦 commercial | ⚪ hosted |
-| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟦 commercial | — |
+| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟦 commercial | 🔴 archived |
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟦 commercial | 🟡 stale |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community | 🟦 commercial | 🟢 active |
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official | 🟦 commercial | 🟢 active |

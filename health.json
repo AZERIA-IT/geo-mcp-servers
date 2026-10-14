@@ -175,7 +175,7 @@
       "status": "active"
     },
     "https://github.com/domdomegg/google-maps-places-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/dynamical-org/mcp": {
@@ -254,9 +254,9 @@
       "pushed": "2025-02",
       "status": "stale"
     },
-    "https://github.com/modelcontextprotocol/servers": {
-      "pushed": "2026-10",
-      "status": "active"
+    "https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps": {
+      "pushed": "2025-05",
+      "status": "archived"
     },
     "https://github.com/nasa/earthdata-mcp": {
       "pushed": "2026-10",
