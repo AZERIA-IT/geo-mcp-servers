@@ -38,6 +38,8 @@ body:
         - Desktop GIS (QGIS, ArcGIS, GRASS)
         - General GIS / geoprocessing toolkits
         - Geospatial data access & catalogs
+        - Parcels & property
+        - Aviation & maritime tracking (ADS-B, AIS)
         - Other / misc
     validations:
       required: true

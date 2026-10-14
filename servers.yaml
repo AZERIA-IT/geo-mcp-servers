@@ -48,6 +48,7 @@ categories:
   desktop_gis:      "Desktop & enterprise GIS (QGIS, ArcGIS)"
   toolkit:          "General GIS / geoprocessing toolkits"
   data_access:      "Geospatial data access & catalogs"
+  property:         "Parcels & property"
   tracking:         "Aviation & maritime tracking (ADS-B, AIS)"
   other:            "Other (IP geolocation, misc)"
 
@@ -183,6 +184,7 @@ servers:
     category: desktop_gis
     author: nicogis
     language: C#/.NET
+    transport: addin
     tags: [arcgis, addin]
     added: 2026-08-02
   - name: esri-mcp
@@ -244,11 +246,12 @@ servers:
     added: 2026-10-06
   - name: Google Maps MCP (reference)
     access: commercial
-    url: https://github.com/modelcontextprotocol/servers
+    url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps
     description: Reference server — geocoding, places, directions, distance matrix, elevation (now archived)
     category: mapping
     author: Anthropic / MCP project
     language: TypeScript
+    transport: stdio
     tags: [google-maps, reference, archived]
     added: 2026-08-02
   - name: google-maps-mcp-server
@@ -258,6 +261,7 @@ servers:
     category: mapping
     author: david-pivonka
     language: TypeScript
+    transport: stdio
     tags: [google-maps, places, routes]
     added: 2026-08-02
   - name: google-maps-places-mcp
@@ -665,6 +669,7 @@ servers:
     category: weather
     author: dynamical.org
     language: Python
+    transport: http
     official: true
     vendor_orgs: [dynamical-org]
     tags: [stac, zarr, icechunk, forecast, gfs, hrrr, ecmwf, hosted]
@@ -932,7 +937,7 @@ servers:
     access: commercial
     url: https://regrid.com/mcp
     description: 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria
-    category: other
+    category: property
     author: Regrid
     official: true
     transport: hosted
@@ -943,7 +948,7 @@ servers:
     access: commercial
     url: https://landrecords.us/documentation/mcp-server
     description: Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry
-    category: other
+    category: property
     author: landrecords.us
     official: true
     transport: hosted
@@ -953,7 +958,7 @@ servers:
   - name: ATTOM MCP
     url: https://github.com/pipeworx-io/mcp-attom
     description: Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history
-    category: other
+    category: property
     author: Pipeworx (uses ATTOM API)
     language: TypeScript
     access: paywalled
@@ -998,7 +1003,7 @@ servers:
     access: commercial
     url: https://www.maia-analytics.com/docs/mcp/connect
     description: "Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying"
-    category: data_access
+    category: property
     author: MAIA Analytics
     official: true
     transport: hosted

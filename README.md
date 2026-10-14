@@ -29,9 +29,9 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**102 servers tracked** across 11 categories.
+**102 servers tracked** across 12 categories.
 
-_Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 18 · ⚪ hosted 20 · ⏳ pending 2._
+_Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 20 · ⏳ pending 2._
 
 
 _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
@@ -46,9 +46,10 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (7)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (6)
+- [Parcels & property](#parcels--property) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
-- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (7)
+- [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
 
 ### Geocoding & place search
 
@@ -89,7 +90,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | — | Felt | official | 🟦 commercial | ⚪ hosted |
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript | Foursquare | official | 🟦 commercial | 🟡 stale |
 | [GIS Cloud MCP Server](https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/) | Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools | — | GIS Cloud | official | 🟦 commercial | ⚪ hosted |
-| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟦 commercial | 🟢 active |
+| [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript | Anthropic / MCP project | community | 🟦 commercial | — |
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript | david-pivonka | community | 🟦 commercial | 🟡 stale |
 | [google-maps-places-mcp](https://github.com/domdomegg/google-maps-places-mcp) | Google Places search + photos | TypeScript | domdomegg | community | 🟦 commercial | 🟢 active |
 | [Mapbox MCP Server](https://github.com/mapbox/mcp-server) | Official Mapbox web services — geocoding, POI search, multimodal routing, matrix, isochrones, static maps | TypeScript | Mapbox | official | 🟦 commercial | 🟢 active |
@@ -180,9 +181,17 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |
-| [MAIA MCP](https://www.maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | — | MAIA Analytics | official | 🟦 commercial | ⚪ hosted |
 | [mcp-earthscope-fdsn](https://github.com/pipeworx-io/mcp-earthscope-fdsn) | FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues | TypeScript | Pipeworx (uses EarthScope FDSN services) | community | 🟩 open | 🟢 active |
 | [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | 🟨 free | 🟢 active |
+
+### Parcels & property
+
+| Server | Description | Lang | By | Type | Access | Health |
+| --- | --- | --- | --- | --- | --- | --- |
+| [ATTOM MCP](https://github.com/pipeworx-io/mcp-attom) | Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history | TypeScript | Pipeworx (uses ATTOM API) | community | 🟥 paywalled | 🟢 active |
+| [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | — | landrecords.us | official | 🟦 commercial | ⚪ hosted |
+| [MAIA MCP](https://www.maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | — | MAIA Analytics | official | 🟦 commercial | ⚪ hosted |
+| [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | — | Regrid | official | 🟦 commercial | ⚪ hosted |
 
 ### Aviation & maritime tracking (ADS-B, AIS)
 
@@ -199,12 +208,9 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ATTOM MCP](https://github.com/pipeworx-io/mcp-attom) | Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history | TypeScript | Pipeworx (uses ATTOM API) | community | 🟥 paywalled | 🟢 active |
 | [ipgeolocation-io-mcp](https://github.com/ipgeolocation/ipgeolocation-io-mcp) | Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN | — | IPGeolocation.io | official | 🟦 commercial | 🟢 active |
 | [IPinfo MCP Server](https://mcp.ipinfo.io/) | Hosted IPinfo MCP — country/continent (free), city/coords/timezone/postal (detailed) | — | IPinfo | official | 🟦 commercial | ⚪ hosted |
-| [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | — | landrecords.us | official | 🟦 commercial | ⚪ hosted |
 | [mcp-server-ipinfo](https://github.com/briandconnelly/mcp-server-ipinfo) | IP geolocation via the IPInfo API (location + network details) | Python | briandconnelly | community | 🟦 commercial | 🟢 active |
-| [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | — | Regrid | official | 🟦 commercial | ⚪ hosted |
 | [TimezoneToolkit](https://github.com/Cicatriiz/timezone-toolkit) | Timezone conversion plus sunrise/sunset/twilight from lat/long | TypeScript | Cicatriiz | community | 🟩 open | 🟡 stale |
 
 <!-- AUTOGEN:END -->
