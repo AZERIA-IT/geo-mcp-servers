@@ -994,6 +994,18 @@ servers:
     tags: [catalog, schema-cards, cross-domain, dataset-discovery, geospatial]
     note: "also runs as a public, zero-auth hosted endpoint at https://api.scigantic.com/mcp (Streamable HTTP)"
     added: 2026-08-28
+  - name: MAIA MCP
+    access: commercial
+    url: https://www.maia-analytics.com/docs/mcp/connect
+    description: "Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying"
+    category: data_access
+    author: MAIA Analytics
+    official: true
+    transport: hosted
+    vendor_domain: maia-analytics.com
+    tags: [parcels, property-data, zoning, owners, us-counties, dataset-generation]
+    note: "Streamable HTTP endpoint https://api.maia-analytics.com/mcp; requires a MAIA account (OAuth sign-in)"
+    added: 2026-10-13
   - name: GeoAI Tools
     access: commercial
     url: https://geoai.tools
