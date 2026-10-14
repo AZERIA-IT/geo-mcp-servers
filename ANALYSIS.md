@@ -1,6 +1,6 @@
 # Geospatial MCP landscape: strategic overview
 
-Snapshot of the catalog at commit `7c098e7` (2026-10-14): 102 servers, health checked 2026-10-14.
+Snapshot of the catalog on 2026-10-14: 102 servers, health checked 2026-10-14, including the housekeeping fixes listed at the end.
 The tables in `README.md` are generated and stay current. This file is a hand-written analysis and does not update itself, so re-run the numbers before relying on them later.
 
 ## Summary
@@ -9,7 +9,7 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 
 | Measure | Value |
 | --- | --- |
-| Servers | 102 across 11 categories |
+| Servers | 102 across 12 categories |
 | Access | 46 open · 4 free · 46 commercial · 6 paywalled |
 | Published by the vendor (`official`) | 37 (36%) |
 | Health | 62 active · 20 hosted · 18 stale · 2 pending |
@@ -26,9 +26,10 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 | Weather & climate | 12 | 12 | 0 | 1 | 2 |
 | Desktop & enterprise GIS | 9 | 5 | 4 | 0 | 3 |
 | GIS / geoprocessing toolkits | 7 | 7 | 0 | 2 | 0 |
-| Geospatial data access & catalogs | 7 | 4 | 3 | 5 | 0 |
-| Other (IP geolocation, parcels, misc) | 7 | 1 | 6 | 4 | 1 |
 | Aviation & maritime tracking | 6 | 3 | 3 | 1 | 0 |
+| Geospatial data access & catalogs | 6 | 4 | 2 | 4 | 0 |
+| Parcels & property | 4 | 0 | 4 | 3 | 0 |
+| Other (IP geolocation, misc) | 4 | 1 | 3 | 2 | 1 |
 | Spatial databases | 3 | 2 | 1 | 1 | 0 |
 | Routing, isochrones & navigation | 2 | 2 | 0 | 0 | 1 |
 
@@ -83,12 +84,14 @@ These capabilities have no dedicated server in the catalog. Some may exist but n
 
 ## Catalog housekeeping
 
-The analysis surfaced some data-quality issues in `servers.yaml`:
+The analysis surfaced data-quality issues in `servers.yaml`. Most are now fixed.
 
-- **Property data is split across four categories.** Regrid, LandRecords.us and ATTOM are under "Other", MAIA under data access, Smarty under geocoding, and Vexcel's property metadata under remote sensing. `CONTRIBUTING.md` allows a new category when several servers share it. A "Parcels & property" category would hold at least four.
-- **The Google Maps reference entry reports the wrong health.** Its URL points to the main `modelcontextprotocol/servers` repository, which is active. The Google Maps server itself has moved to the archived servers repository. The entry shows 🟢 active but should read archived.
-- **Most entries have no `transport`.** 72 of 102 leave it unset, so the catalog cannot yet answer "which servers run locally". 33 entries also have no `language`, though for hosted servers that is expected.
-- **`added` dates do not show market timing.** 87 entries carry an August 2026 date because that is when the catalog was seeded, so the dates track intake, not when servers appeared.
+| Issue | Status |
+| --- | --- |
+| Property data was split across categories: Regrid, LandRecords.us and ATTOM under "Other", MAIA under data access. | Fixed. A new "Parcels & property" category holds all four. Smarty stays under geocoding and Vexcel under remote sensing, because address verification and imagery are their main purpose. |
+| The Google Maps reference entry pointed at the active `modelcontextprotocol/servers` repository, so it showed 🟢 active although the server is archived. | Fixed. The URL now points at `src/google-maps` in `modelcontextprotocol/servers-archived`, read-only since 2025-05-29. Its health shows "—" until the next health refresh marks it archived. |
+| 72 of 102 entries had no `transport`, so the catalog could not say which servers run locally. | Partly fixed. Four entries now have a transport that their own data or source confirms. The other 68 are GitHub repositories whose transport needs checking in each README before it is recorded. |
+| `added` dates do not show market timing. 87 entries carry an August 2026 date because that is when the catalog was seeded. | Not a defect. Read the dates as catalog intake, not as when servers appeared. |
 
 ## Implications
 
@@ -96,4 +99,4 @@ For someone choosing servers: commodity lookups are a solved problem, so choose 
 
 For someone building servers: the open opportunities are in analysis and in under-served data. Desktop GIS automation, cloud warehouse spatial SQL, transit and hazard data have the clearest demand and the least supply. Another OSM geocoder does not.
 
-For maintaining this catalog: a property category, a fix to the Google Maps entry, and filling in `transport` would make the catalog answer more of these questions on its own.
+For maintaining this catalog: recording `transport` for the remaining 68 entries is the main open task. With it, the catalog could answer "which servers run locally" on its own.
