@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**102 servers tracked** across 12 categories.
+**103 servers tracked** across 12 categories.
 
 _Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 61 · 🟡 stale 18 · ⚪ hosted 20 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
+_Access: 🟩 open 47 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (6)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (7)
 - [Parcels & property](#parcels--property) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
@@ -182,6 +182,7 @@ _Access: 🟩 open 46 · 🟨 free 4 · 🟦 commercial 46 · 🟥 paywalled 6._
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |
 | [mcp-earthscope-fdsn](https://github.com/pipeworx-io/mcp-earthscope-fdsn) | FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues | TypeScript | Pipeworx (uses EarthScope FDSN services) | community | 🟩 open | 🟢 active |
+| [Registry of Open Data on AWS MCP (RODA)](https://github.com/awslabs/mcp/tree/main/src/roda-mcp-server) | Search and explore the Registry of Open Data on AWS — 1,000+ public S3 datasets incl. satellite imagery, climate & weather: tag/org/licence search, STAC-endpoint discovery, bucket preview and file sampling | Python | AWS (awslabs) | official | 🟩 open | — |
 | [Scigantic MCP](https://github.com/Scigantic/scigantic-mcp) | Cross-domain scientific dataset catalog and schema cards (genomics, proteomics, imaging, and a large Earth-observation/geospatial footprint), with per-dataset access snippets for agents | Python | Scigantic | official | 🟨 free | 🟢 active |
 
 ### Parcels & property

@@ -1105,3 +1105,16 @@ servers:
     tags: [data-centers, site-selection, power-grid, fiber, energy, interconnection-queue]
     note: remote MCP at https://dchub.cloud/mcp (streamable HTTP); keyless free tier, optional API key for higher limits
     added: 2026-10-12
+  - name: Registry of Open Data on AWS MCP (RODA)
+    access: open
+    url: https://github.com/awslabs/mcp/tree/main/src/roda-mcp-server
+    description: "Search and explore the Registry of Open Data on AWS — 1,000+ public S3 datasets incl. satellite imagery, climate & weather: tag/org/licence search, STAC-endpoint discovery, bucket preview and file sampling"
+    category: data_access
+    author: AWS (awslabs)
+    language: Python
+    official: true
+    vendor_orgs: [awslabs]
+    transport: stdio
+    tags: [aws, open-data, s3, stac, catalog, dataset-discovery, earth-observation]
+    note: "uvx awslabs.roda-mcp-server@latest; public buckets need no AWS account, requester-pays datasets need AWS credentials; AWS labels it for development and evaluation use"
+    added: 2026-10-15
