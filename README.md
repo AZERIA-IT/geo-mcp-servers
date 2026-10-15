@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **106 servers tracked** across 12 categories.
 
-_Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 18 · ⚪ hosted 21 · ⏳ pending 2 · 🔴 archived 1._
+_Health checked 2026-10-15 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 22 · ⏳ pending 2 · 🔴 archived 1._
 
 
 _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
@@ -58,7 +58,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 | [Geoapify MCP Server (community)](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟦 commercial | 🟡 stale |
 | [Geoapify MCP Server (official)](https://apidocs.geoapify.com/mcp) | Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations | — | Geoapify | official | 🟦 commercial | ⚪ hosted |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community | 🟩 open | 🟡 stale |
-| [GridPin MCP](https://github.com/gridpin/gridpin/tree/main/mcp) | Offline forward and reverse geocoding from one local file per country (BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine | Python / Rust | GridPin | official | 🟩 open | — |
+| [GridPin MCP](https://github.com/gridpin/gridpin/tree/main/mcp) | Offline forward and reverse geocoding from one local file per country (BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine | Python / Rust | GridPin | official | 🟩 open | 🟢 active |
 | [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community | 🟦 commercial | 🟡 stale |
 | [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community | 🟩 open | 🟡 stale |
 | [mcp-nominatim](https://github.com/pipeworx-io/mcp-nominatim) | Geocoding / reverse geocoding via OSM Nominatim | Python | pipeworx-io | community | 🟩 open | 🟢 active |
@@ -180,7 +180,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript | DC Hub | official | 🟦 commercial | 🟢 active |
-| [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | — | Factori | official | 🟥 paywalled | — |
+| [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | — | Factori | official | 🟥 paywalled | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | — | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python | Christian Braun | community | 🟩 open | 🟢 active |

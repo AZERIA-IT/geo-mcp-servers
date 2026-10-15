@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-10-14",
+  "checked": "2026-10-15",
   "servers": {
     "https://apidocs.geoapify.com/mcp": {
       "status": "hosted"
@@ -21,6 +21,9 @@
       "status": "hosted"
     },
     "https://docs.tilebox.com/onboard-your-agent": {
+      "status": "hosted"
+    },
+    "https://factori.ai/mcp/": {
       "status": "hosted"
     },
     "https://felt.com/blog/introducing-felt-mcp-server": {
@@ -209,6 +212,10 @@
       "pushed": "2026-10",
       "status": "active"
     },
+    "https://github.com/gridpin/gridpin/tree/main/mcp": {
+      "pushed": "2026-10",
+      "status": "active"
+    },
     "https://github.com/ipgeolocation/ipgeolocation-io-mcp": {
       "pushed": "2026-10",
       "status": "active"
@@ -342,7 +349,7 @@
       "status": "active"
     },
     "https://github.com/wb1016/copernicus-mcp": {
-      "pushed": "2026-02",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/weather-mcp/weather-mcp": {
