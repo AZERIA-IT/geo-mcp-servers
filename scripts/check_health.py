@@ -16,6 +16,10 @@ Classification:
 
 Requires the `gh` CLI (authenticated) for GitHub repos. Re-run periodically;
 commit the refreshed health.json alongside README.md.
+
+For entries with no `deployment`, the run also reads the repo README and prints
+a suggested value with the evidence for it. It never edits servers.yaml: review
+each suggestion and copy the ones you accept.
 """
 from __future__ import annotations
 
@@ -34,6 +38,16 @@ ROOT = Path(__file__).resolve().parent.parent
 ACTIVE_MONTHS = 12  # GitHub repos pushed within this window count as "active"
 NOW = datetime.now(timezone.utc)
 GH = re.compile(r"https?://github\.com/([^/]+)/([^/#?]+)")
+GH_SUBDIR = re.compile(r"https?://github\.com/[^/]+/[^/]+/tree/[^/]+/(.+?)/?$")
+
+# README signals used to suggest a `deployment` value. Heuristic: a human confirms.
+LOCAL_HINT = re.compile(r"\bstdio\b|StdioServerTransport|\buvx\s|\bnpx\s|claude_desktop_config", re.I)
+HTTP_HINT = re.compile(r"streamable[- ]?http|\bSSE\b|--transport[ =]+(?:http|sse|streamable)", re.I)
+ENDPOINT = re.compile(r"https?://([a-z0-9.-]+\.[a-z]{2,}|localhost|127\.0\.0\.1|0\.0\.0\.0)(?::\d+)?/[^\s)\"'`<>]*?\b(?:mcp|sse)\b", re.I)
+LOOPBACK = {"localhost", "127.0.0.1", "0.0.0.0"}
+# Hosts that show up in MCP READMEs but are not the server's own endpoint.
+NOT_ENDPOINTS = ("github.com", "githubusercontent.com", "modelcontextprotocol.io", "npmjs.com",
+                 "pypi.org", "smithery.ai", "glama.ai", "example.com", "anthropic.com", "claude.ai")
 
 
 def classify(server: dict) -> dict:
@@ -66,10 +80,45 @@ def classify(server: dict) -> dict:
         return {"status": "unreachable"}
 
 
+def suggest_deployment(server: dict) -> dict | None:
+    """Suggest a `deployment` value for an entry that has none, from its README."""
+    if server.get("deployment"):
+        return None
+    url = server.get("url", "")
+    m = GH.match(url)
+    if not m:
+        return {"value": "hosted", "evidence": "non-GitHub URL (vendor page)"}
+    owner, repo = m.group(1), m.group(2).removesuffix(".git")
+    sub = GH_SUBDIR.match(url)
+    path = f"repos/{owner}/{repo}/readme" + (f"/{sub.group(1)}" if sub else "")
+    r = subprocess.run(
+        ["gh", "api", path, "-H", "Accept: application/vnd.github.raw"],
+        capture_output=True, text=True, timeout=30,
+    )
+    if r.returncode != 0:
+        return {"value": None, "evidence": "README not readable"}
+    return suggest_from_readme(r.stdout)
+
+
+def suggest_from_readme(text: str) -> dict:
+    hosts = {h.lower() for h in ENDPOINT.findall(text)}
+    public = sorted(h for h in hosts - LOOPBACK if not h.endswith(NOT_ENDPOINTS))
+    local = bool(LOCAL_HINT.search(text))
+    http = bool(HTTP_HINT.search(text)) or bool(hosts & LOOPBACK)
+    if public:
+        return {"value": "local+hosted", "evidence": f"public endpoint {', '.join(public)}"}
+    if local:
+        return {"value": "local", "evidence": "stdio/uvx/npx setup" + ("; also serves HTTP" if http else "")}
+    if http:
+        return {"value": "self-hosted", "evidence": "HTTP/SSE server, no public endpoint"}
+    return {"value": None, "evidence": "no clear signal in README"}
+
+
 def main() -> int:
     servers = yaml.safe_load((ROOT / "servers.yaml").read_text())["servers"]
     with ThreadPoolExecutor(max_workers=12) as ex:
         entries = list(ex.map(classify, servers))
+        suggestions = list(ex.map(suggest_deployment, servers))
 
     result = {
         "checked": date.today().isoformat(),
@@ -90,6 +139,11 @@ def main() -> int:
         print("\nNeeds attention:")
         for name, e in flagged:
             print(f"  [{e['status']}] {name}" + (f"  (pushed {e['pushed']})" if e.get("pushed") else ""))
+    missing = [(s.get("name"), d) for s, d in zip(servers, suggestions) if d is not None]
+    if missing:
+        print(f"\nNo `deployment` recorded ({len(missing)}) — suggestions to review, then copy into servers.yaml:")
+        for name, d in missing:
+            print(f"  {name}: {d['value'] or '?'}  ({d['evidence']})")
     watch = [s.get("name") for s in servers if s.get("watch")]
     if watch:
         print("\n⏳ Watchlist — early access / not GA; re-check for a public endpoint:")
