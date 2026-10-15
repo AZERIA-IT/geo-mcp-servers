@@ -363,10 +363,10 @@ jobs:
 
               # A hosted entry has no source to scan, so the least it can do is
               # name who runs it — and prove the URL is actually on their domain.
-              if r.get("transport") == "hosted" or r.get("official") and host not in ("github.com", "www.github.com"):
+              if r.get("deployment") == "hosted" or r.get("official") and host not in ("github.com", "www.github.com"):
                   if not domain:
                       print(f"::error::{name}: needs vendor_domain "
-                            f"(official on a non-GitHub URL, or transport: hosted)")
+                            f"(official on a non-GitHub URL, or deployment: hosted)")
                       fail = True
                   elif not (host == domain or host.endswith("." + domain)):
                       print(f"::error::{name}: host '{host}' is outside the "
