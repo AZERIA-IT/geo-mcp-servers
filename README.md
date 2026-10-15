@@ -29,16 +29,16 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**105 servers tracked** across 12 categories.
+**106 servers tracked** across 12 categories.
 
 _Health checked 2026-10-14 (active = repo pushed within 12 months): 🟢 active 62 · 🟡 stale 18 · ⚪ hosted 21 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 47 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
+_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 
 ### Categories
 
-- [Geocoding & place search](#geocoding--place-search) (16)
+- [Geocoding & place search](#geocoding--place-search) (17)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (18)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
@@ -58,6 +58,7 @@ _Access: 🟩 open 47 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 | [Geoapify MCP Server (community)](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟦 commercial | 🟡 stale |
 | [Geoapify MCP Server (official)](https://apidocs.geoapify.com/mcp) | Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations | — | Geoapify | official | 🟦 commercial | ⚪ hosted |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community | 🟩 open | 🟡 stale |
+| [GridPin MCP](https://github.com/gridpin/gridpin/tree/main/mcp) | Offline forward and reverse geocoding from one local file per country (BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine | Python / Rust | GridPin | official | 🟩 open | — |
 | [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community | 🟦 commercial | 🟡 stale |
 | [MCP-Geo](https://github.com/webcoderz/MCP-Geo) | Geocoding MCP built on GeoPy — multi-provider (Nominatim, ArcGIS, Bing) | Python | webcoderz | community | 🟩 open | 🟡 stale |
 | [mcp-nominatim](https://github.com/pipeworx-io/mcp-nominatim) | Geocoding / reverse geocoding via OSM Nominatim | Python | pipeworx-io | community | 🟩 open | 🟢 active |

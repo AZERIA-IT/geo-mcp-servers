@@ -1142,3 +1142,16 @@ servers:
     tags: [geoapify, geocoding, places, routing, geometry, hosted]
     note: "Remote HTTP endpoint: https://api.geoapify.com/v1/mcp; requires a Geoapify API key in the x-api-key header"
     added: 2026-10-15
+  - name: GridPin MCP
+    access: open
+    url: https://github.com/gridpin/gridpin/tree/main/mcp
+    description: "Offline forward and reverse geocoding from one local file per country (BR, DE, ES, FR, IT, NL, RS); no API key, queries stay on the machine"
+    category: geocoding
+    author: GridPin
+    language: Python / Rust
+    official: true
+    vendor_orgs: [gridpin]
+    transport: stdio
+    tags: [geocoding, reverse-geocoding, offline, overture, duckdb, privacy]
+    note: "uvx gridpin-mcp; country files built from Overture, BAN, CNEFE and other open sources, data licences vary by source; paid tiers planned, nothing on sale yet"
+    added: 2026-10-15
