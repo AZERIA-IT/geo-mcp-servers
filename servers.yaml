@@ -68,6 +68,7 @@ servers:
     category: toolkit
     author: mahdin75
     language: Python
+    deployment: local
     tags: [shapely, gdal, geopandas, rasterio]
     added: 2026-08-02
   - name: gdal-mcp
@@ -77,6 +78,7 @@ servers:
     category: toolkit
     author: JordanGunn / Wayfinder-Foundry
     language: Python
+    deployment: local
     tags: [gdal, raster, vector, cog]
     added: 2026-08-02
   - name: geoserver-mcp
@@ -86,6 +88,7 @@ servers:
     category: toolkit
     author: mahdin75
     language: Python
+    deployment: local
     tags: [geoserver, ogc, wms, wfs]
     added: 2026-08-02
   - name: fastgeoapi MCP server
@@ -95,6 +98,7 @@ servers:
     category: toolkit
     author: Geobeyond
     language: Python
+    deployment: local
     tags: [pygeoapi, ogc-api, fastmcp, oidc]
     added: 2026-08-12
   - name: MapSmith
@@ -128,6 +132,7 @@ servers:
     category: desktop_gis
     author: jjsantos01
     language: Python
+    deployment: local
     tags: [qgis, pyqgis]
     added: 2026-08-02
   - name: qgis-mcp (nkarasiak)
@@ -137,6 +142,7 @@ servers:
     category: desktop_gis
     author: nkarasiak
     language: Python
+    deployment: local
     tags: [qgis]
     added: 2026-08-02
   - name: QgisStreamMCP
@@ -146,6 +152,7 @@ servers:
     category: desktop_gis
     author: nic01asFr
     language: Python
+    deployment: local
     tags: [qgis, docker, grass, saga]
     added: 2026-08-02
   - name: QGIS2OllamaMCP
@@ -155,6 +162,7 @@ servers:
     category: desktop_gis
     author: Anita Graser
     language: Python
+    deployment: self-hosted
     tags: [qgis, ollama]
     added: 2026-08-02
   - name: qgis-mcp-1
@@ -164,6 +172,7 @@ servers:
     category: desktop_gis
     author: Sir-Adrien-Claudington
     language: Python
+    deployment: local
     tags: [qgis, fork]
     added: 2026-08-02
   - name: ArcGISMCP
@@ -173,6 +182,7 @@ servers:
     category: desktop_gis
     author: GarrickGarcia
     language: Python
+    deployment: local
     tags: [arcgis, esri]
     added: 2026-08-02
   - name: MCP-ArcGISPro
@@ -182,6 +192,7 @@ servers:
     category: desktop_gis
     author: geo2004
     language: Python
+    deployment: local
     tags: [arcgis, arcpy]
     added: 2026-08-02
   - name: MCP-Server-ArcGIS-Pro-AddIn
@@ -212,6 +223,7 @@ servers:
     category: mapping
     author: Cesium (CesiumGS)
     language: TypeScript
+    deployment: local
     official: true
     vendor_orgs: [CesiumGS]
     tags: [cesium, 3d-tiles, cesiumjs, globe, visualization]
@@ -235,6 +247,7 @@ servers:
     category: mapping
     author: Mapbox
     language: TypeScript
+    deployment: local+hosted
     official: true
     vendor_orgs: [mapbox]
     tags: [mapbox, geocoding, routing, tiles]
@@ -278,6 +291,7 @@ servers:
     category: mapping
     author: domdomegg
     language: TypeScript
+    deployment: self-hosted
     tags: [google-maps, places]
     added: 2026-08-02
   - name: mcp-google-map
@@ -287,6 +301,7 @@ servers:
     category: mapping
     author: cablate
     language: TypeScript
+    deployment: local
     tags: [google-maps]
     added: 2026-08-02
   - name: baidu-maps/mcp
@@ -296,6 +311,7 @@ servers:
     category: mapping
     author: Baidu
     language: Python / TypeScript
+    deployment: local
     official: true
     vendor_orgs: [baidu-maps]
     tags: [baidu, china, geocoding, routing]
@@ -339,6 +355,7 @@ servers:
     description: MapTiler geocoding, elevation and mapping APIs as MCP tools
     category: mapping
     author: Pipeworx (uses MapTiler API)
+    deployment: local+hosted
     tags: [maptiler, tiles, geocoding]
     note: community Pipeworx-gateway wrapper — no official MapTiler-published server found
     added: 2026-08-02
@@ -416,6 +433,7 @@ servers:
     category: geocoding
     author: Jagan Shanmugam
     language: Python
+    deployment: local
     tags: [osm, geocoding, poi]
     added: 2026-08-02
   - name: openstreetmap-mcp-server
@@ -425,6 +443,7 @@ servers:
     category: geocoding
     author: cyanheads
     language: TypeScript
+    deployment: local+hosted
     tags: [osm, overpass, geocoding]
     added: 2026-08-02
   - name: OSM-GeoJSON-MCP-Server
@@ -443,6 +462,7 @@ servers:
     category: geocoding
     author: pipeworx-io
     language: Python
+    deployment: local+hosted
     tags: [nominatim, osm]
     added: 2026-08-02
   - name: MCP-Geo
@@ -461,6 +481,7 @@ servers:
     category: geocoding
     author: X-McKay
     language: Python
+    deployment: local
     tags: [nominatim, geocoding]
     added: 2026-08-02
   - name: what3words MCP
@@ -469,6 +490,7 @@ servers:
     description: Convert 3-word addresses to lat/long + bounding box
     category: geocoding
     author: Pipeworx (uses what3words API)
+    deployment: local+hosted
     tags: [what3words, geocoding]
     added: 2026-08-02
 
@@ -480,6 +502,7 @@ servers:
     category: routing
     author: Atakan Salar
     language: TypeScript
+    deployment: local
     tags: [valhalla, routing, isochrones]
     added: 2026-08-02
   - name: OSRM MCP
@@ -489,6 +512,7 @@ servers:
     category: routing
     author: Pipeworx (uses OSRM)
     language: TypeScript
+    deployment: local+hosted
     tags: [osrm, routing, matrix, map-matching]
     note: routes via OSRM's public demo server by default — point at your own OSRM instance for production
     added: 2026-08-26
@@ -510,6 +534,7 @@ servers:
     category: remote_sensing
     author: BnJam
     language: Python
+    deployment: local
     tags: [stac, catalog]
     note: repo URL flagged for confirmation
     added: 2026-08-02
@@ -520,6 +545,7 @@ servers:
     category: remote_sensing
     author: wb1016
     language: Python
+    deployment: local
     tags: [copernicus, sentinel, esa]
     added: 2026-08-02
   - name: google-earth-engine-mcp
@@ -529,6 +555,7 @@ servers:
     category: remote_sensing
     author: cameronking4
     language: TypeScript
+    deployment: self-hosted
     tags: [earth-engine, gee]
     added: 2026-08-02
   - name: Axion-MCP
@@ -538,6 +565,7 @@ servers:
     category: remote_sensing
     author: Dhenenjay
     language: TypeScript
+    deployment: local
     tags: [earth-engine, ndvi]
     added: 2026-08-02
   - name: unicef-gee-mcp
@@ -547,6 +575,7 @@ servers:
     category: remote_sensing
     author: Tryolabs (for UNICEF)
     language: Python
+    deployment: self-hosted
     tags: [earth-engine, unicef]
     added: 2026-08-02
   - name: earthdata-mcp
@@ -556,6 +585,7 @@ servers:
     category: remote_sensing
     author: NASA
     language: Python
+    deployment: local
     official: true
     vendor_orgs: [nasa]
     tags: [nasa, earthdata, cmr]
@@ -567,6 +597,7 @@ servers:
     category: remote_sensing
     author: ProgramComputer
     language: TypeScript
+    deployment: local
     tags: [nasa, imagery]
     added: 2026-08-02
   - name: SkyFi MCP
@@ -575,6 +606,7 @@ servers:
     description: Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language
     category: remote_sensing
     author: jpwilson (SkyFi platform)
+    deployment: local
     tags: [skyfi, tasking, imagery-marketplace]
     note: SkyFi launched an official MCP (2026-07-22); this is the most complete community repo — confirm if an official skyfi-org repo is preferred
     added: 2026-08-02
@@ -622,6 +654,7 @@ servers:
     category: weather
     author: weather-mcp
     language: Python
+    deployment: local
     tags: [noaa, open-meteo, air-quality]
     added: 2026-08-02
   - name: open-meteo-mcp
@@ -631,6 +664,7 @@ servers:
     category: weather
     author: cmer81
     language: TypeScript
+    deployment: local
     tags: [open-meteo, era5]
     added: 2026-08-02
   - name: mcp_weather_server
@@ -640,6 +674,7 @@ servers:
     category: weather
     author: isdaniel
     language: Python
+    deployment: local
     tags: [open-meteo]
     added: 2026-08-02
   - name: weather-mcp (Fahrenheit)
@@ -658,6 +693,7 @@ servers:
     category: weather
     author: nitvob
     language: TypeScript
+    deployment: local
     tags: [nws]
     added: 2026-08-02
   - name: Government of Canada Weather MCP
@@ -667,6 +703,7 @@ servers:
     category: weather
     author: SeanLF
     language: Python
+    deployment: local
     tags: [canada, eccc, forecast]
     added: 2026-09-24
   - name: dynamical.org Weather & Climate Catalog
@@ -691,6 +728,7 @@ servers:
     category: database
     author: receptopalak
     language: Node.js
+    deployment: local
     tags: [postgis, postgres]
     added: 2026-08-02
   - name: Wherobots MCP Server
@@ -715,6 +753,7 @@ servers:
     category: other
     author: briandconnelly
     language: Python
+    deployment: local
     tags: [ip-geolocation, ipinfo]
     added: 2026-08-02
   - name: ipgeolocation-io-mcp
@@ -723,6 +762,7 @@ servers:
     description: Official ipgeolocation.io — IP geolocation, VPN/proxy detection, timezone, astronomy, ASN
     category: other
     author: IPGeolocation.io
+    deployment: local
     official: true
     vendor_orgs: [ipgeolocation]
     tags: [ip-geolocation]
@@ -748,6 +788,7 @@ servers:
     category: geocoding
     author: limingchina
     language: TypeScript
+    deployment: local
     tags: [here, geocoding, routing, traffic]
     added: 2026-08-05
   - name: OpenCage Geocoding MCP
@@ -757,6 +798,7 @@ servers:
     category: geocoding
     author: OpenCage
     language: TypeScript
+    deployment: local
     official: true
     vendor_orgs: [OpenCageData]
     tags: [opencage, geocoding]
@@ -768,6 +810,7 @@ servers:
     category: geocoding
     author: OriShmila
     language: Python
+    deployment: local
     tags: [geoapify, geocoding, routing, isolines]
     added: 2026-08-05
   - name: Smarty MCP Server
@@ -790,6 +833,7 @@ servers:
     category: mapping
     author: TomTom
     language: TypeScript
+    deployment: local
     official: true
     vendor_orgs: [tomtom-international]
     tags: [tomtom, geocoding, routing, traffic]
@@ -800,6 +844,7 @@ servers:
     description: TomTom MOVE traffic analytics — past, present & predicted traffic
     category: mapping
     author: TomTom
+    deployment: local
     official: true
     vendor_orgs: [tomtom-international]
     tags: [tomtom, traffic, analytics]
@@ -810,6 +855,7 @@ servers:
     description: Community wrapper over the Esri ArcGIS Location Platform — geocoding, routing, places
     category: mapping
     author: lwsinclair
+    deployment: local
     tags: [arcgis, esri, geocoding, routing]
     added: 2026-08-05
 
@@ -821,6 +867,7 @@ servers:
     category: database
     author: srivinod1
     language: Python
+    deployment: local
     tags: [overture, duckdb, geoparquet, s3]
     added: 2026-08-05
 
@@ -856,6 +903,7 @@ servers:
     category: weather
     author: cyanheads
     language: TypeScript
+    deployment: local+hosted
     tags: [open-meteo, era5, air-quality, elevation]
     added: 2026-08-05
   - name: OpenAQ MCP Server
@@ -864,6 +912,7 @@ servers:
     description: Global air-quality stations & pollutant observations (PM2.5, PM10, O3, NO2, SO2, CO) via OpenAQ v3, with SQL over history
     category: weather
     author: cyanheads
+    deployment: local+hosted
     tags: [openaq, air-quality]
     added: 2026-08-05
   - name: aqicn-mcp
@@ -872,6 +921,7 @@ servers:
     description: Real-time air quality from the World Air Quality Index (AQICN) by city or coordinates
     category: weather
     author: mattmarcin
+    deployment: local
     tags: [aqicn, air-quality]
     added: 2026-08-05
   - name: NOAA Marine MCP Server
@@ -880,6 +930,7 @@ servers:
     description: NOAA CO-OPS tide stations + NDBC buoys — tide predictions, water levels, tidal currents, live buoy conditions
     category: weather
     author: cyanheads
+    deployment: local+hosted
     tags: [noaa, tides, buoys, marine]
     added: 2026-08-05
   - name: NOAA-TidesAndCurrents-MCP
@@ -889,6 +940,7 @@ servers:
     category: weather
     author: RyanCardin15
     language: TypeScript
+    deployment: local
     tags: [noaa, tides, currents]
     added: 2026-08-05
 
@@ -900,6 +952,7 @@ servers:
     category: tracking
     author: dirkhh
     language: Python
+    deployment: local
     tags: [adsb, aviation, aircraft]
     added: 2026-08-05
   - name: Flightradar24 API MCP
@@ -908,6 +961,7 @@ servers:
     description: Official Flightradar24 flight-tracking API access
     category: tracking
     author: Flightradar24
+    deployment: local
     official: true
     vendor_orgs: [Flightradar24]
     tags: [flightradar24, aviation, flights]
@@ -918,6 +972,7 @@ servers:
     description: Read-only vessel identity, AIS-style positions/tracks, port calls & schedules (BYOK maritime providers)
     category: tracking
     author: tools-mcp
+    deployment: local
     tags: [ais, vessels, maritime]
     added: 2026-08-05
   - name: MarineTraffic MCP Server
@@ -926,6 +981,7 @@ servers:
     description: Vessel positions/details, search & vessels-in-area via MarineTraffic
     category: tracking
     author: Cyreslab-AI
+    deployment: local
     tags: [marinetraffic, ais, vessels]
     added: 2026-08-05
   - name: SignalK MCP Server
@@ -968,6 +1024,7 @@ servers:
     category: property
     author: Pipeworx (uses ATTOM API)
     language: TypeScript
+    deployment: local+hosted
     access: paywalled
     tags: [attom, property, real-estate, parcels]
     note: requires a paid ATTOM Data Solutions API key
@@ -979,6 +1036,7 @@ servers:
     category: other
     author: Cicatriiz
     language: TypeScript
+    deployment: local
     tags: [timezone, sun, coordinates]
     added: 2026-08-05
   - name: GeoLens MCP
@@ -1047,6 +1105,7 @@ servers:
     description: "Search Earth-embedding collections by text, image chip or coordinates, run inference to create new collections, and inspect chip/cell metadata"
     category: remote_sensing
     author: LGND AI
+    deployment: local+hosted
     official: true
     vendor_orgs: [EarthLegend]
     tags: [embeddings, satellite-imagery, geoai, similarity-search]
@@ -1084,6 +1143,7 @@ servers:
     category: data_access
     author: Pipeworx (uses EarthScope FDSN services)
     language: TypeScript
+    deployment: local+hosted
     tags: [earthscope, fdsn, seismology, earthquakes, stations]
     note: community Pipeworx-gateway wrapper — no official EarthScope-published server found; no GNSS coverage
     added: 2026-10-08

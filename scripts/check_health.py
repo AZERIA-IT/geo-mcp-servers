@@ -106,8 +106,9 @@ def suggest_deployment(server: dict) -> dict | None:
 
 def suggest_from_readme(text: str) -> dict:
     hosts = {h.lower() for h in ENDPOINT.findall(text)}
-    public = sorted(h for h in hosts - LOOPBACK
-                    if not h.endswith(NOT_ENDPOINTS) and not PLACEHOLDER.search(h))
+    public = sorted(h for h in hosts - LOOPBACK  # docs.* hosts are documentation, not endpoints
+                    if not h.endswith(NOT_ENDPOINTS) and not h.startswith("docs.")
+                    and not PLACEHOLDER.search(h))
     # A placeholder endpoint (your-domain.com/mcp) means you deploy it yourself.
     self_run = bool(hosts & LOOPBACK) or any(PLACEHOLDER.search(h) for h in hosts)
     local = bool(LOCAL_HINT.search(text))
