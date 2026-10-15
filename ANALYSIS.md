@@ -13,7 +13,8 @@ The catalog shows a market that is broad but uneven. Everyday location tasks (ge
 | Access | 48 open · 4 free · 47 commercial · 7 paywalled |
 | Published by the vendor (`official`) | 41 (39%) |
 | Health | 63 active · 22 hosted · 18 stale · 2 pending · 1 archived |
-| Delivered as a hosted endpoint | 24 (22 live, 2 in early access) |
+| Deployment | 53 local · 24 hosted · 15 local+hosted · 5 self-hosted · 1 add-in · 8 unknown |
+| Usable from web clients (hosted or local+hosted) | 39 (37%) |
 | Implementation language, where known | Python 38 · TypeScript 24 · JavaScript/Node 4 · other 5 |
 
 ## Coverage by category
@@ -56,6 +57,27 @@ Vendors are also starting to replace community wrappers of their own APIs. Geoap
 
 Of the 24 hosted servers, nearly all come from vendors selling data or a platform: parcel data (Regrid, LandRecords.us, MAIA), imagery (Vexcel, Planet, Planetary Computer Pro), address data (Smarty), location services (Geoapify), mobility and foot-traffic data (Factori) and cloud GIS (CARTO, Felt, GIS Cloud). A hosted server keeps the vendor's data and API keys on their side and lets them update tools without users reinstalling anything. We expect this to become the default delivery model for commercial geodata. It also changes what the catalog can check: a hosted server has no source code to scan, so trust rests on the vendor's domain.
 
+### Where servers run
+
+Every entry records a `deployment` value: where the server runs and who runs it.
+
+| Deployment | Servers | Official | Community | What it means for the user |
+| --- | ---: | ---: | ---: | --- |
+| Local | 53 | 12 | 41 | Install it; your client starts it on your machine. Needs a desktop client. |
+| Hosted | 24 | 22 | 2 | Connect to the vendor's URL. Works from web clients; queries go to the vendor. |
+| Local + hosted | 15 | 5 | 10 | Run it yourself, or use a public endpoint someone else runs. |
+| Self-hosted | 5 | 0 | 5 | Deploy it as an HTTP service yourself. |
+| Add-in | 1 | 0 | 1 | Runs inside a desktop application (ArcGIS Pro). |
+| Unknown | 8 | 2 | 6 | The README does not say. |
+
+Vendors host and the community ships local servers. More than half of the official servers (22 of 41) are hosted, while nearly two thirds of the community servers (41 of 65) run locally. Only 39 servers, about a third of the catalog, can be used from a web client such as claude.ai without installing anything.
+
+The public endpoints in the local + hosted group mostly come from two community operators, not from the data vendors. Pipeworx runs gateway endpoints for six servers (MapTiler, Nominatim, what3words, OSRM, ATTOM and EarthScope), and cyanheads runs public instances of four (OpenStreetMap, Open-Meteo, OpenAQ and NOAA Marine). These are convenient, but a user's queries then go to a third party that is neither the user nor the data provider.
+
+Maintenance follows the same split. 13 of the 18 stale servers are local, and all 15 local + hosted servers are active, because someone has to keep a public endpoint running.
+
+By category, the pattern follows the work. Desktop GIS and geoprocessing toolkits are almost entirely local, because they drive software or data on the user's machine. Parcels and property data is entirely remote, because the value is the vendor's dataset.
+
 ### Earth observation is the most commercially varied area
 
 Remote sensing has the widest spread of access models in the catalog: open STAC and NASA/ESA access, Earth Engine wrappers, imagery marketplaces (SkyFi), and paid-only vendor platforms. Three of the catalog's seven paywalled servers are here. Newer entries go beyond search and download to embeddings and similarity search (LGND) and array-data queries over Zarr (Arraylake), which suggests the area is moving from data access towards analysis. Discovery is improving too: AWS now publishes an official server for its Registry of Open Data, which finds datasets with STAC endpoints and previews public S3 buckets.
@@ -86,6 +108,6 @@ These capabilities have no dedicated server in the catalog. Some may exist but n
 
 ## Implications
 
-For someone choosing servers: commodity lookups are a solved problem, so choose on data quality, licence and vendor support rather than features. Prefer official or actively maintained servers. For hosted servers, check who runs the domain.
+For someone choosing servers: commodity lookups are a solved problem, so choose on data quality, licence and vendor support rather than features. Prefer official or actively maintained servers. Check `deployment` first: if you work in a web client, only the hosted and local + hosted servers are open to you, and for any public endpoint, check who runs the domain.
 
 For someone building servers: the open opportunities are in analysis and in under-served data. Desktop GIS automation, cloud warehouse spatial SQL, transit and hazard data have the clearest demand and the least supply. Another OSM geocoder does not.
