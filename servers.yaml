@@ -754,7 +754,7 @@ servers:
     vendor_orgs: [OpenCageData]
     tags: [opencage, geocoding]
     added: 2026-08-05
-  - name: Geoapify MCP Server
+  - name: Geoapify MCP Server (community)
     access: commercial
     url: https://github.com/OriShmila/geoapify-mcp-server
     description: Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time

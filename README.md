@@ -55,7 +55,7 @@ _Access: 🟩 open 47 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 
 | Server | Description | Lang | By | Type | Access | Health |
 | --- | --- | --- | --- | --- | --- | --- |
-| [Geoapify MCP Server](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟦 commercial | 🟡 stale |
+| [Geoapify MCP Server (community)](https://github.com/OriShmila/geoapify-mcp-server) | Geoapify geocoding, reverse geocoding, places, routing, isolines & travel-time | Python | OriShmila | community | 🟦 commercial | 🟡 stale |
 | [Geoapify MCP Server (official)](https://apidocs.geoapify.com/mcp) | Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations | — | Geoapify | official | 🟦 commercial | ⚪ hosted |
 | [geocode-mcp](https://github.com/X-McKay/geocode-mcp) | Lat/long for places via free Nominatim, no API key | Python | X-McKay | community | 🟩 open | 🟡 stale |
 | [HERE Maps MCP Server](https://github.com/limingchina/heremaps-mcp-server) | HERE Platform geocoding, reverse geocoding, routing, places search & traffic | TypeScript | limingchina | community | 🟦 commercial | 🟡 stale |
