@@ -17,8 +17,8 @@ Classification:
 Requires the `gh` CLI (authenticated) for GitHub repos. Re-run periodically;
 commit the refreshed health.json alongside README.md.
 
-For entries with no `deployment`, the run also reads the repo README and prints
-a suggested value with the evidence for it. It never edits servers.yaml: review
+For entries with no `deployment`, or `deployment: unknown`, the run also reads
+the repo README and prints a suggested value with the evidence for it. It never edits servers.yaml: review
 each suggestion and copy the ones you accept.
 """
 from __future__ import annotations
@@ -85,8 +85,8 @@ def classify(server: dict) -> dict:
 
 
 def suggest_deployment(server: dict) -> dict | None:
-    """Suggest a `deployment` value for an entry that has none, from its README."""
-    if server.get("deployment"):
+    """Suggest a `deployment` value for an entry that has none or `unknown`, from its README."""
+    if server.get("deployment") not in (None, "unknown"):
         return None
     url = server.get("url", "")
     m = GH.match(url)
@@ -149,7 +149,7 @@ def main() -> int:
             print(f"  [{e['status']}] {name}" + (f"  (pushed {e['pushed']})" if e.get("pushed") else ""))
     missing = [(s.get("name"), d) for s, d in zip(servers, suggestions) if d is not None]
     if missing:
-        print(f"\nNo `deployment` recorded ({len(missing)}) — suggestions to review, then copy into servers.yaml:")
+        print(f"\nDeployment missing or unknown ({len(missing)}) — suggestions to review, then copy into servers.yaml:")
         for name, d in missing:
             print(f"  {name}: {d['value'] or '?'}  ({d['evidence']})")
     watch = [s.get("name") for s in servers if s.get("watch")]

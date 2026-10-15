@@ -36,7 +36,8 @@
 #                  local+hosted source you can run, plus a public vendor endpoint
 #                  self-hosted  you deploy it as a service and connect over HTTP
 #                  addin        runs inside a desktop application
-#                  unknown      not yet determined
+#                  unknown      checked, but the README does not say; the health
+#                               check keeps suggesting a value for these
 #                  `hosted` means there is no source to scan, so CI can only
 #                  check the endpoint is still live. check_health.py suggests a
 #                  value for entries that have none.
@@ -212,6 +213,7 @@ servers:
     category: desktop_gis
     author: eKerney
     language: Python
+    deployment: unknown
     tags: [esri, living-atlas]
     added: 2026-08-02
 
@@ -323,6 +325,7 @@ servers:
     category: mapping
     author: Foursquare
     language: TypeScript
+    deployment: unknown
     official: true
     vendor_orgs: [foursquare]
     tags: [foursquare, places, poi]
@@ -366,6 +369,7 @@ servers:
     category: mapping
     author: Stadia Maps
     language: TypeScript
+    deployment: unknown
     official: true
     vendor_orgs: [stadiamaps]
     tags: [stadiamaps, geocoding, routing, isochrones, tiles]
@@ -424,6 +428,7 @@ servers:
     category: geocoding
     author: NERV Systems
     language: Go
+    deployment: unknown
     tags: [osm, geocoding, routing]
     added: 2026-08-02
   - name: open-streetmap-mcp
@@ -453,6 +458,7 @@ servers:
     category: geocoding
     author: shimizu
     language: JavaScript
+    deployment: unknown
     tags: [osm, geojson, overpass]
     added: 2026-08-02
   - name: mcp-nominatim
@@ -472,6 +478,7 @@ servers:
     category: geocoding
     author: webcoderz
     language: Python
+    deployment: unknown
     tags: [geopy, multi-provider]
     added: 2026-08-02
   - name: geocode-mcp
@@ -525,6 +532,7 @@ servers:
     category: remote_sensing
     author: Isaac Corley
     language: Python
+    deployment: unknown
     tags: [planetary-computer, stac, imagery]
     added: 2026-08-02
   - name: stac-mcp
@@ -684,6 +692,7 @@ servers:
     category: weather
     author: FahrenheitResearch
     language: Python
+    deployment: unknown
     tags: [nws, nexrad, radar]
     added: 2026-08-02
   - name: nws-mcp-server
