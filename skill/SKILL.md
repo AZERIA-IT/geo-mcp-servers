@@ -62,7 +62,7 @@ resolved `$REPO` in every command below.
        official: true                                # ONLY if the vendor that owns the service publishes it
        vendor_orgs: [<github-org>]                   # REQUIRED when official + a github.com URL (must equal the repo owner)
        vendor_domain: <example.com>                  # REQUIRED when official + non-GitHub URL, AND for any hosted entry (URL host must equal it or be a subdomain)
-       transport: <stdio | http | hosted | addin | unknown>   # optional; use 'hosted' for remote vendor endpoints
+       deployment: <local | hosted | local+hosted | self-hosted | addin | unknown>   # optional; see below
        watch: true                                   # ONLY if not generally available yet (beta/waitlist) — renders ⏳ pending
        tags: [<keywords>]
        note: <caveat — endpoint URL, API-key need, version support, etc.>   # optional, ≤300 chars
@@ -76,7 +76,11 @@ resolved `$REPO` in every command below.
    - **`official` must be backed.** CI checks the repo owner against `vendor_orgs`
      (GitHub) or the URL host against `vendor_domain` (otherwise). A community
      wrapper of a vendor's paid API is **not** official — leave `official` off.
-   - **Hosted services**: set `transport: hosted` + `vendor_domain`.
+   - **`deployment`** says where the server runs: `local` (you install it; your client starts it over stdio),
+     `hosted` (the vendor runs it; you connect to their URL), `local+hosted` (source you can run, plus a
+     public endpoint the vendor runs), `self-hosted` (you deploy it as an HTTP service), `addin` (runs inside
+     a desktop app). `check_health.py` suggests a value for entries that have none.
+   - **Hosted services**: set `deployment: hosted` + `vendor_domain`.
    - **Not yet GA** (private beta / waitlist): set `watch: true`.
 
 4. **Regenerate the README** (the repo ships a `.venv` with PyYAML):

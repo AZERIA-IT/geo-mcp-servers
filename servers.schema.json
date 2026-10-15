@@ -71,15 +71,15 @@
         },
 
         "vendor_domain": {
-          "description": "Registrable domain the vendor controls, e.g. 'carto.com'. Required when official is true and the URL is not on github.com, and whenever transport is hosted. The URL host must equal it or be a subdomain of it.",
+          "description": "Registrable domain the vendor controls, e.g. 'carto.com'. Required when official is true and the URL is not on github.com, and whenever deployment is hosted. The URL host must equal it or be a subdomain of it.",
           "type": "string",
           "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$"
         },
 
-        "transport": {
-          "description": "How the server is reached. 'hosted' entries have no source to scan, so CI can only check that the endpoint is still live and still itself.",
+        "deployment": {
+          "description": "Where the server runs and who runs it. local = you install it and your client starts it (stdio); hosted = the vendor runs it and you connect to their URL; local+hosted = source you can run yourself plus a public endpoint the vendor runs; self-hosted = you deploy it as a service and connect over HTTP; addin = runs inside a desktop application. 'hosted' entries have no source to scan, so CI can only check that the endpoint is still live and still itself.",
           "type": "string",
-          "enum": ["stdio", "http", "hosted", "addin", "unknown"]
+          "enum": ["local", "hosted", "local+hosted", "self-hosted", "addin", "unknown"]
         },
 
         "tags": {
@@ -139,8 +139,8 @@
         {
           "comment": "A hosted endpoint you cannot scan should at least name who runs it.",
           "if": {
-            "properties": { "transport": { "const": "hosted" } },
-            "required": ["transport"]
+            "properties": { "deployment": { "const": "hosted" } },
+            "required": ["deployment"]
           },
           "then": { "required": ["vendor_domain"] }
         }

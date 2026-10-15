@@ -30,9 +30,16 @@
 #   vendor_domain: (required when official + non-GitHub URL, and for any hosted
 #                  entry) registrable domain the vendor controls, e.g. carto.com.
 #                  The URL host must equal it or be a subdomain of it.
-#   transport:     (optional) stdio | http | hosted | addin | unknown. `hosted`
-#                  means there is no source to scan, so CI can only check the
-#                  endpoint is still live.
+#   deployment:    (optional) where the server runs and who runs it:
+#                  local        you install it; your client starts it (stdio)
+#                  hosted       the vendor runs it; you connect to their URL
+#                  local+hosted source you can run, plus a public vendor endpoint
+#                  self-hosted  you deploy it as a service and connect over HTTP
+#                  addin        runs inside a desktop application
+#                  unknown      not yet determined
+#                  `hosted` means there is no source to scan, so CI can only
+#                  check the endpoint is still live. check_health.py suggests a
+#                  value for entries that have none.
 #
 # The shape above is enforced by servers.schema.json in .github/workflows/verify.yml.
 #
@@ -97,7 +104,7 @@ servers:
     category: toolkit
     author: mapsmith-ai
     language: Python
-    transport: stdio
+    deployment: local
     tags: [geoprocessing, provenance, duckdb, whitebox, geopandas]
     added: 2026-08-23
   - name: TerraLab MCP
@@ -107,7 +114,7 @@ servers:
     category: toolkit
     author: TerraLab
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: terra-lab.ai
     tags: [geocoding, elevation, file-conversion, french-parcels, open-data]
     note: "free, no-auth Streamable HTTP endpoint https://mcp.terra-lab.ai/mcp (verified 2026-10-11); client config/docs at github.com/TerraLabAI/mcp (MIT)"
@@ -184,7 +191,7 @@ servers:
     category: desktop_gis
     author: nicogis
     language: C#/.NET
-    transport: addin
+    deployment: addin
     tags: [arcgis, addin]
     added: 2026-08-02
   - name: esri-mcp
@@ -217,7 +224,7 @@ servers:
     category: mapping
     author: Esri
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: arcgis.com
     tags: [arcgis, geocoding, routing]
     added: 2026-08-02
@@ -239,7 +246,7 @@ servers:
     category: mapping
     author: MapQuest
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: mapquest.com
     tags: [mapquest, geocoding, routing, search, traffic, truck-routing, hosted]
     note: endpoint https://www.mapquestapi.com/mcp (streamable HTTP, OAuth); every tool needs an active MapQuest API key, free monthly transactions included
@@ -251,7 +258,7 @@ servers:
     category: mapping
     author: Anthropic / MCP project
     language: TypeScript
-    transport: stdio
+    deployment: local
     tags: [google-maps, reference, archived]
     added: 2026-08-02
   - name: google-maps-mcp-server
@@ -261,7 +268,7 @@ servers:
     category: mapping
     author: david-pivonka
     language: TypeScript
-    transport: stdio
+    deployment: local
     tags: [google-maps, places, routes]
     added: 2026-08-02
   - name: google-maps-places-mcp
@@ -311,7 +318,7 @@ servers:
     category: mapping
     author: CARTO
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: carto.com
     tags: [carto, warehouse, hosted]
     added: 2026-08-02
@@ -322,7 +329,7 @@ servers:
     category: mapping
     author: Felt
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: felt.com
     tags: [felt, hosted, spatial-sql]
     added: 2026-08-02
@@ -353,7 +360,7 @@ servers:
     category: mapping
     author: GIS Cloud
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: giscloud.com
     tags: [giscloud, hosted, layers, features, forms, rendering]
     note: endpoint https://mcp.giscloud.com/mcp
@@ -367,7 +374,7 @@ servers:
     category: geocoding
     author: Zephr
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: zephr.xyz
     tags: [places, place-details, navigation, positioning, hosted]
     added: 2026-08-12
@@ -377,7 +384,7 @@ servers:
     description: Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage
     category: geocoding
     author: Wheremind
-    transport: hosted
+    deployment: hosted
     vendor_domain: wheremind.ai
     tags: [places, geocoding, reverse-geocoding, routing, directions, hosted]
     note: private beta (request an invite at wheremind.ai); endpoint https://wheremind.ai/mcp (streamable HTTP, OAuth with email-code sign-in or stored Bearer); agent docs at https://wheremind.ai/llms.txt
@@ -390,7 +397,7 @@ servers:
     category: geocoding
     author: chuofringer
     language: Python
-    transport: stdio
+    deployment: local
     tags: [overture, duckdb, geocoding, isochrones, boundaries, gers]
     added: 2026-08-19
   - name: osmmcp
@@ -577,7 +584,7 @@ servers:
     category: remote_sensing
     author: Vexcel
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: vexceldata.com
     access: paywalled
     tags: [vexcel, aerial-imagery, elevation, property, damage-assessment]
@@ -591,7 +598,7 @@ servers:
     author: Tilebox
     language: Python / Go
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: tilebox.com
     tags: [tilebox, earth-observation, datasets, workflows, schemas, cli, agent-skills]
     added: 2026-08-02
@@ -602,7 +609,7 @@ servers:
     category: remote_sensing
     author: Earthmover
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: earthmover.io
     tags: [arraylake, zarr, icechunk, edr, scientific-data, hosted]
     added: 2026-08-02
@@ -669,7 +676,7 @@ servers:
     category: weather
     author: dynamical.org
     language: Python
-    transport: http
+    deployment: local+hosted
     official: true
     vendor_orgs: [dynamical-org]
     tags: [stac, zarr, icechunk, forecast, gfs, hrrr, ecmwf, hosted]
@@ -694,7 +701,7 @@ servers:
     author: Wherobots
     language: Python
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: wherobots.com
     tags: [wherobots, sedona, spatial-sql]
     note: install docs for Claude Code / OpenCode; confirm canonical repo/doc URL
@@ -727,7 +734,7 @@ servers:
     category: other
     author: IPinfo
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: ipinfo.io
     tags: [ip-geolocation, hosted]
     added: 2026-08-02
@@ -770,7 +777,7 @@ servers:
     category: geocoding
     author: Smarty
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: smarty.com
     tags: [smarty, address-validation, enrichment, hosted]
     added: 2026-08-05
@@ -825,7 +832,7 @@ servers:
     category: remote_sensing
     author: Planet Labs
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: planet.com
     tags: [planet, imagery, tasking]
     added: 2026-08-05
@@ -836,7 +843,7 @@ servers:
     category: remote_sensing
     author: Microsoft
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: microsoft.com
     tags: [planetary-computer, stac, microsoft]
     added: 2026-08-05
@@ -926,7 +933,7 @@ servers:
     url: https://signalk.org/2025/introducing-signalk-mcp-server-ai-powered-marine-data-access/
     description: Conversational access to live boat/marine sensor data over Signal K
     category: tracking
-    transport: hosted
+    deployment: hosted
     vendor_domain: signalk.org
     author: Signal K project
     tags: [signalk, marine, sensors]
@@ -940,7 +947,7 @@ servers:
     category: property
     author: Regrid
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: regrid.com
     tags: [regrid, parcels, cadastral, hosted]
     added: 2026-08-05
@@ -951,7 +958,7 @@ servers:
     category: property
     author: landrecords.us
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: landrecords.us
     tags: [parcels, cadastral, property, hosted]
     added: 2026-08-12
@@ -983,7 +990,7 @@ servers:
     language: Python
     official: true
     vendor_orgs: [geolens-io]
-    transport: stdio
+    deployment: local
     tags: [catalog, postgis, ogc-api, stac]
     added: 2026-08-21
   - name: Scigantic MCP
@@ -995,7 +1002,7 @@ servers:
     language: Python
     official: true
     vendor_orgs: [Scigantic]
-    transport: stdio
+    deployment: local+hosted
     tags: [catalog, schema-cards, cross-domain, dataset-discovery, geospatial]
     note: "also runs as a public, zero-auth hosted endpoint at https://api.scigantic.com/mcp (Streamable HTTP)"
     added: 2026-08-28
@@ -1006,7 +1013,7 @@ servers:
     category: property
     author: MAIA Analytics
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: maia-analytics.com
     tags: [parcels, property-data, zoning, owners, us-counties, dataset-generation]
     note: "Streamable HTTP endpoint https://api.maia-analytics.com/mcp; requires a MAIA account (OAuth sign-in)"
@@ -1018,7 +1025,7 @@ servers:
     category: data_access
     author: GeoAI Tools
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: geoai.tools
     watch: true
     note: "early access / waitlist — no public MCP endpoint yet; connects your ArcGIS data via OAuth. Also a CLI (@geoai-tools/cli on npm). Re-check for GA."
@@ -1030,7 +1037,7 @@ servers:
     category: data_access
     author: Christian Braun
     language: Python
-    transport: http
+    deployment: self-hosted
     tags: [geonode, catalog, sdi, permissions, oauth2]
     note: "verified against GeoNode 4.4.x; 5.0.x expected to work but unverified"
     added: 2026-09-21
@@ -1052,7 +1059,7 @@ servers:
     category: remote_sensing
     author: LGND AI
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: lgnd.ai
     tags: [lgnd, satellite-imagery, naip, sentinel-2, geoai]
     note: "GA 2026-10-01; endpoint https://geo.lgnd.ai/mcp (HTTP); free for everyone during initial release (one-click account); distinct from the LGND Developer MCP"
@@ -1066,7 +1073,7 @@ servers:
     language: Python
     official: true
     vendor_orgs: [aws-samples]
-    transport: stdio
+    deployment: local
     tags: [kiro, stac, cog, duckdb, embeddings, geoai]
     note: "bundle — servers install à la carte via uvx; optional credentialed servers cover cloud warehouses (Redshift/Snowflake/BigQuery) & commercial imagery"
     added: 2026-09-07
@@ -1087,7 +1094,7 @@ servers:
     category: tracking
     author: Bilawal Sidhu
     language: JavaScript
-    transport: stdio
+    deployment: local
     tags: [3d-globe, cesium, adsb, ais, satellites, earthquakes, cctv, osint]
     note: MCP server ships inside the app — run the local web app (npm run dev) and point server/mcp/stdio.js at it; most layers keyless, some (vessels, Google 3D, TomTom) need a provider key
     added: 2026-10-09
@@ -1101,7 +1108,7 @@ servers:
     official: true
     vendor_orgs: [azmartone67]
     vendor_domain: dchub.cloud
-    transport: http
+    deployment: local+hosted
     tags: [data-centers, site-selection, power-grid, fiber, energy, interconnection-queue]
     note: remote MCP at https://dchub.cloud/mcp (streamable HTTP); keyless free tier, optional API key for higher limits
     added: 2026-10-12
@@ -1114,7 +1121,7 @@ servers:
     language: Python
     official: true
     vendor_orgs: [awslabs]
-    transport: stdio
+    deployment: local
     tags: [aws, open-data, s3, stac, catalog, dataset-discovery, earth-observation]
     note: "uvx awslabs.roda-mcp-server@latest; public buckets need no AWS account, requester-pays datasets need AWS credentials; AWS labels it for development and evaluation use"
     added: 2026-10-15
@@ -1125,7 +1132,7 @@ servers:
     category: data_access
     author: Factori
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: factori.ai
     tags: [foot-traffic, mobility, poi, demographics, site-selection, audience, ooh, hosted]
     note: "endpoint https://mcp.factori.ai/mcp (streamable HTTP, OAuth); 14-day free trial, then contact sales"
@@ -1136,7 +1143,7 @@ servers:
     category: geocoding
     author: Geoapify
     official: true
-    transport: hosted
+    deployment: hosted
     vendor_domain: geoapify.com
     access: commercial
     tags: [geoapify, geocoding, places, routing, geometry, hosted]
@@ -1151,7 +1158,7 @@ servers:
     language: Python / Rust
     official: true
     vendor_orgs: [gridpin]
-    transport: stdio
+    deployment: local
     tags: [geocoding, reverse-geocoding, offline, overture, duckdb, privacy]
     note: "uvx gridpin-mcp; country files built from Overture, BAN, CNEFE and other open sources, data licences vary by source; paid tiers planned, nothing on sale yet"
     added: 2026-10-15
