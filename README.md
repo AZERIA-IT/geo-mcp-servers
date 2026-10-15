@@ -1,6 +1,6 @@
 # Geospatial MCP Servers
 
-A curated, tracked list of [Model Context Protocol](https://modelcontextprotocol.io) (MCP) servers for **geospatial, GIS, mapping, and earth-observation** work — geocoding, routing, PostGIS, STAC/imagery, QGIS/ArcGIS, weather, and the commercial location platforms.
+A curated, tracked list of [Model Context Protocol](https://modelcontextprotocol.io) (MCP) servers for **geospatial, GIS, mapping, and earth-observation** work — geocoding, routing, PostGIS, STAC/imagery, QGIS/ArcGIS, weather, and the commercial location platforms. For a strategic overview of what the catalog covers, where the market is heading, and the gaps, see [ANALYSIS.md](ANALYSIS.md).
 
 The tables below are **generated** from [`servers.yaml`](servers.yaml) — the single source of truth.
 
