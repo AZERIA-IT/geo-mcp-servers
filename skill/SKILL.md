@@ -38,8 +38,19 @@ resolved `$REPO` in every command below.
    🟥 paywalled) and a generated **health** status (🟢 active / 🟡 stale /
    ⚪ hosted / ⏳ pending / 🔴 archived|dead) — use these when recommending
    (e.g. prefer active + open/free unless the user wants a specific vendor).
-4. Recommend the closest 1–3 with URLs and a one-line why. If nothing fits, say
-   so rather than inventing a server.
+4. Filter on **`deployment`** (where the server runs). If you do not know how the
+   user will connect, ask whether they use a desktop client (Claude Desktop,
+   Claude Code, an IDE) or a web client (claude.ai, ChatGPT).
+   - Web client: only `hosted` and `local+hosted` servers work. For a
+     `local+hosted` server, give the public endpoint from its `note` and say who
+     runs it, because queries go to that operator.
+   - Desktop client: any value works. Prefer `local` when the user's data must
+     stay on their machine.
+   - `self-hosted` means the user must deploy an HTTP service; `addin` runs
+     inside a desktop app; `unknown` means the README does not say, so tell the
+     user to check before relying on it.
+5. Recommend the closest 1–3 with URLs, their deployment, and a one-line why. If
+   nothing fits, say so rather than inventing a server.
 
 ## Add a newly discovered server
 
