@@ -126,7 +126,7 @@ def build_tables(data: dict, health: dict) -> str:
 
     show_health = bool(hservers)
     show_access = any(s.get("access") for s in servers)
-    header = "| Server | Description | Lang | By | Type |"
+    header = "| Server | Description | Lang / Deployment | By | Type |"
     sep = "| --- | --- | --- | --- | --- |"
     if show_access:
         header += " Access |"
@@ -145,7 +145,8 @@ def build_tables(data: dict, health: dict) -> str:
         for s in rows:
             name = f"[{esc(s.get('name', '?'))}]({s['url']})" if s.get("url") else esc(s.get("name", "?"))
             desc = esc(s.get("description", ""))
-            lang = esc(s.get("language", "")) or "—"
+            # Language and deployment share a column, stacked: "Python<br>local".
+            lang = "<br>".join(p for p in (esc(s.get("language", "")), esc(s.get("deployment", ""))) if p) or "—"
             author = esc(s.get("author", "")) or "—"
             kind = "official" if s.get("official") else "community"
             row = f"| {name} | {desc} | {lang} | {author} | {kind} |"
