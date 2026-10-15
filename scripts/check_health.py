@@ -41,13 +41,17 @@ GH = re.compile(r"https?://github\.com/([^/]+)/([^/#?]+)")
 GH_SUBDIR = re.compile(r"https?://github\.com/[^/]+/[^/]+/tree/[^/]+/(.+?)/?$")
 
 # README signals used to suggest a `deployment` value. Heuristic: a human confirms.
-LOCAL_HINT = re.compile(r"\bstdio\b|StdioServerTransport|\buvx\s|\bnpx\s|claude_desktop_config", re.I)
+LOCAL_HINT = re.compile(r"\bstdio\b|StdioServerTransport|\buvx\b|\bnpx\b|claude_desktop_config", re.I)
 HTTP_HINT = re.compile(r"streamable[- ]?http|\bSSE\b|--transport[ =]+(?:http|sse|streamable)", re.I)
-ENDPOINT = re.compile(r"https?://([a-z0-9.-]+\.[a-z]{2,}|localhost|127\.0\.0\.1|0\.0\.0\.0)(?::\d+)?/[^\s)\"'`<>]*?\b(?:mcp|sse)\b", re.I)
+# An MCP endpoint URL ends in /mcp or /sse, e.g. https://mcp.mapbox.com/mcp.
+ENDPOINT = re.compile(r"https?://([a-z0-9.-]+\.[a-z]{2,}|localhost|127\.0\.0\.1|0\.0\.0\.0)(?::\d+)?(?:/[^\s)\"'`<>?#]*)?/(?:mcp|sse)/?(?=$|[\s)\"'`<>?#\]])", re.I | re.M)
 LOOPBACK = {"localhost", "127.0.0.1", "0.0.0.0"}
 # Hosts that show up in MCP READMEs but are not the server's own endpoint.
 NOT_ENDPOINTS = ("github.com", "githubusercontent.com", "modelcontextprotocol.io", "npmjs.com",
-                 "pypi.org", "smithery.ai", "glama.ai", "example.com", "anthropic.com", "claude.ai")
+                 "pypi.org", "smithery.ai", "glama.ai", "example.com", "anthropic.com", "claude.ai",
+                 "shields.io", "badge.fury.io", "pepy.tech", "star-history.com", "contrib.rocks",
+                 "cursor.com", "vscode.dev", "visualstudio.com", "deepwiki.com", "mcp.so", "mseep.ai")
+PLACEHOLDER = re.compile(r"your-|example|<|\{")
 
 
 def classify(server: dict) -> dict:
@@ -102,9 +106,12 @@ def suggest_deployment(server: dict) -> dict | None:
 
 def suggest_from_readme(text: str) -> dict:
     hosts = {h.lower() for h in ENDPOINT.findall(text)}
-    public = sorted(h for h in hosts - LOOPBACK if not h.endswith(NOT_ENDPOINTS))
+    public = sorted(h for h in hosts - LOOPBACK
+                    if not h.endswith(NOT_ENDPOINTS) and not PLACEHOLDER.search(h))
+    # A placeholder endpoint (your-domain.com/mcp) means you deploy it yourself.
+    self_run = bool(hosts & LOOPBACK) or any(PLACEHOLDER.search(h) for h in hosts)
     local = bool(LOCAL_HINT.search(text))
-    http = bool(HTTP_HINT.search(text)) or bool(hosts & LOOPBACK)
+    http = bool(HTTP_HINT.search(text)) or self_run
     if public:
         return {"value": "local+hosted", "evidence": f"public endpoint {', '.join(public)}"}
     if local:
