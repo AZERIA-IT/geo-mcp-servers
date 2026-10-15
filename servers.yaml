@@ -1118,3 +1118,15 @@ servers:
     tags: [aws, open-data, s3, stac, catalog, dataset-discovery, earth-observation]
     note: "uvx awslabs.roda-mcp-server@latest; public buckets need no AWS account, requester-pays datasets need AWS credentials; AWS labels it for development and evaluation use"
     added: 2026-10-15
+  - name: Factori MCP
+    access: paywalled
+    url: https://factori.ai/mcp/
+    description: "Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning"
+    category: data_access
+    author: Factori
+    official: true
+    transport: hosted
+    vendor_domain: factori.ai
+    tags: [foot-traffic, mobility, poi, demographics, site-selection, audience, ooh, hosted]
+    note: "endpoint https://mcp.factori.ai/mcp (streamable HTTP, OAuth); 14-day free trial, then contact sales"
+    added: 2026-10-15
