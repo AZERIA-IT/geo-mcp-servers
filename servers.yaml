@@ -1130,3 +1130,15 @@ servers:
     tags: [foot-traffic, mobility, poi, demographics, site-selection, audience, ooh, hosted]
     note: "endpoint https://mcp.factori.ai/mcp (streamable HTTP, OAuth); 14-day free trial, then contact sales"
     added: 2026-10-15
+  - name: Geoapify MCP Server (official)
+    url: https://apidocs.geoapify.com/mcp
+    description: Geocoding, reverse geocoding, place search, routing, route matrices, and GeoJSON geometry operations
+    category: geocoding
+    author: Geoapify
+    official: true
+    transport: hosted
+    vendor_domain: geoapify.com
+    access: commercial
+    tags: [geoapify, geocoding, places, routing, geometry, hosted]
+    note: "Remote HTTP endpoint: https://api.geoapify.com/v1/mcp; requires a Geoapify API key in the x-api-key header"
+    added: 2026-10-15
