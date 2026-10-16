@@ -1231,3 +1231,16 @@ servers:
     tags: [geocoding, reverse-geocoding, offline, overture, duckdb, privacy]
     note: "uvx gridpin-mcp; country files built from Overture, BAN, CNEFE and other open sources, data licences vary by source; paid tiers planned, nothing on sale yet"
     added: 2026-10-15
+  - name: Geobble
+    access: commercial
+    url: https://api.geobble.com/mcp
+    description: "Hosted geospatial workspace — import GIS files and PostGIS data, run spatial analysis, refine cartography, and publish interactive web maps to a stable URL"
+    category: mapping
+    author: Geobble
+    language: TypeScript
+    official: true
+    deployment: hosted
+    vendor_domain: geobble.com
+    tags: [maps, publishing, gis, postgis, spatial-analysis, oauth]
+    note: "OAuth 2.1 + PKCE; RFC 9728 protected-resource metadata at geobble.com/.well-known/oauth-protected-resource. Tool catalog is readable unauthenticated (64 tools); tools/call requires a bearer token."
+    added: 2026-10-16

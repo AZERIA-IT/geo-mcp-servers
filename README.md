@@ -29,18 +29,18 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**106 servers tracked** across 12 categories.
+**107 servers tracked** across 12 categories.
 
 _Health checked 2026-10-15 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 22 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
+_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 48 · 🟥 paywalled 7._
 
 ### Categories
 
 - [Geocoding & place search](#geocoding--place-search) (17)
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
-- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (18)
+- [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (19)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (16)
 - [Weather & climate](#weather--climate) (12)
@@ -91,6 +91,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 47 · 🟥 paywalled 7._
 | [Cesium AI Integrations](https://github.com/CesiumGS/cesium-ai-integrations) | Official Cesium MCP servers & agent skills connecting the Cesium 3D geospatial ecosystem (CesiumJS, 3D Tiles) to AI assistants | TypeScript<br>local | Cesium (CesiumGS) | official | 🟦 commercial | 🟢 active |
 | [Felt MCP Server](https://felt.com/blog/introducing-felt-mcp-server) | Remote MCP — create maps, query warehouse, run spatial SQL, style layers, publish live URLs | hosted | Felt | official | 🟦 commercial | ⚪ hosted |
 | [foursquare-places-mcp](https://github.com/foursquare/foursquare-places-mcp) | Official Foursquare Places API v3 — venue search, place details, location context | TypeScript<br>unknown | Foursquare | official | 🟦 commercial | 🟡 stale |
+| [Geobble](https://api.geobble.com/mcp) | Hosted geospatial workspace — import GIS files and PostGIS data, run spatial analysis, refine cartography, and publish interactive web maps to a stable URL | TypeScript<br>hosted | Geobble | official | 🟦 commercial | — |
 | [GIS Cloud MCP Server](https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/) | Remote read & write MCP for the GIS Cloud platform — 55 tools covering maps, layers, features, spatial queries, forms, tables, file import & map rendering, with OAuth 2.1 sign-in and two-phase confirmation for destructive tools | hosted | GIS Cloud | official | 🟦 commercial | ⚪ hosted |
 | [Google Maps MCP (reference)](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps) | Reference server — geocoding, places, directions, distance matrix, elevation (now archived) | TypeScript<br>local | Anthropic / MCP project | community | 🟦 commercial | 🔴 archived |
 | [google-maps-mcp-server](https://github.com/david-pivonka/google-maps-mcp-server) | STDIO server on the new Google Places (New) + Routes APIs | TypeScript<br>local | david-pivonka | community | 🟦 commercial | 🟡 stale |
