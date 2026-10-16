@@ -1,7 +1,10 @@
 {
   "active_months": 12,
-  "checked": "2026-10-15",
+  "checked": "2026-10-16",
   "servers": {
+    "https://api.geobble.com/mcp": {
+      "status": "hosted"
+    },
     "https://apidocs.geoapify.com/mcp": {
       "status": "hosted"
     },
