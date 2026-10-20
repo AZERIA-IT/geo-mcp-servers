@@ -1244,3 +1244,16 @@ servers:
     tags: [maps, publishing, gis, postgis, spatial-analysis, oauth]
     note: "OAuth 2.1 + PKCE; RFC 9728 protected-resource metadata at geobble.com/.well-known/oauth-protected-resource. Tool catalog is readable unauthenticated (64 tools); tools/call requires a bearer token."
     added: 2026-10-16
+  - name: geoDB (mineral exploration)
+    access: commercial
+    url: https://geodb.io/connect-ai/
+    description: Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write
+    category: data_access
+    author: geoDB
+    official: true
+    deployment: hosted
+    vendor_domain: geodb.io
+    tags: [mining, mineral-exploration, drillhole, assay, qaqc, geoparquet, stac, hosted]
+    note: private beta (request access at https://geodb.io/contact-us/); endpoint https://api.geodb.io/mcp (streamable HTTP, OAuth sign-in from inside the assistant); agent docs at https://geodb.io/llms.txt
+    watch: true
+    added: 2026-10-20
