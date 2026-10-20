@@ -1257,3 +1257,15 @@ servers:
     note: private beta (request access at https://geodb.io/contact-us/); endpoint https://api.geodb.io/mcp (streamable HTTP, OAuth sign-in from inside the assistant); agent docs at https://geodb.io/llms.txt
     watch: true
     added: 2026-10-20
+  - name: Zip-Codes.com ZIP & Postal Code MCP
+    access: commercial
+    url: https://www.zip-codes.com/api/mcp
+    description: "US address validation and standardization to ZIP+4, ZIP and Canadian postal code lookup, reverse geocoding to postal code, radius search, and census tract and district enrichment"
+    category: geocoding
+    author: Zip-Codes.com
+    official: true
+    deployment: hosted
+    vendor_domain: zip-codes.com
+    tags: [zip-codes, postal-codes, address-validation, census, canada, hosted]
+    note: "endpoint https://mcp.zip-codes.com/mcp (streamable HTTP); keyless demo mode, free API key (X-Api-Key header) gives 2,500 credits/day; MCP Registry: com.zip-codes/api"
+    added: 2026-10-20
