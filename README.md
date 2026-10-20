@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**107 servers tracked** across 12 categories.
+**108 servers tracked** across 12 categories.
 
 _Health checked 2026-10-16 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 23 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 48 · 🟥 paywalled 7._
+_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 49 · 🟥 paywalled 7._
 
 ### Categories
 
@@ -46,7 +46,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 48 · 🟥 paywalled 7._
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
-- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (8)
+- [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (9)
 - [Parcels & property](#parcels--property) (4)
 - [Aviation & maritime tracking (ADS-B, AIS)](#aviation--maritime-tracking-ads-b-ais) (6)
 - [Other (IP geolocation, misc)](#other-ip-geolocation-misc) (4)
@@ -183,6 +183,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 48 · 🟥 paywalled 7._
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
+| [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟦 commercial | — |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python<br>self-hosted | Christian Braun | community | 🟩 open | 🟢 active |
 | [mcp-earthscope-fdsn](https://github.com/pipeworx-io/mcp-earthscope-fdsn) | FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues | TypeScript<br>local+hosted | Pipeworx (uses EarthScope FDSN services) | community | 🟩 open | 🟢 active |
