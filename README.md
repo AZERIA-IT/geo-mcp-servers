@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **110 servers tracked** across 12 categories.
 
-_Health checked 2026-10-16 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 23 · ⏳ pending 2 · 🔴 archived 1._
+_Health checked 2026-10-24 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 24 · ⏳ pending 3 · 🔴 archived 1 · 🔴 unreachable 1._
 
 
 _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
@@ -72,7 +72,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
 | [what3words MCP](https://github.com/pipeworx-io/mcp-what3words) | Convert 3-word addresses to lat/long + bounding box | local+hosted | Pipeworx (uses what3words API) | community | 🟦 commercial | 🟢 active |
 | [Wheremind](https://wheremind.ai) | Hosted remote MCP for live place search, place details, nearby search, geocoding & turn-by-turn directions for Claude, ChatGPT, Cursor and Claude Code — no Maps API key to manage | hosted | Wheremind | community | 🟦 commercial | ⏳ pending |
 | [Zephr Places Grounding MCP](https://zephr.xyz/places-grounding) | Places grounding for local AI — nearest-place search, rich place details & walking navigation (find_nearest_to_me, get_place_details, navigate_to_place) | hosted | Zephr | official | 🟦 commercial | ⚪ hosted |
-| [Zip-Codes.com ZIP & Postal Code MCP](https://www.zip-codes.com/api/mcp) | US address validation and standardization to ZIP+4, ZIP and Canadian postal code lookup, reverse geocoding to postal code, radius search, and census tract and district enrichment | hosted | Zip-Codes.com | official | 🟦 commercial | — |
+| [Zip-Codes.com ZIP & Postal Code MCP](https://www.zip-codes.com/api/mcp) | US address validation and standardization to ZIP+4, ZIP and Canadian postal code lookup, reverse geocoding to postal code, radius search, and census tract and district enrichment | hosted | Zip-Codes.com | official | 🟦 commercial | ⚪ hosted |
 
 ### Routing, isochrones & navigation
 
@@ -129,7 +129,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
 | [Planet MCP Server (beta)](https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403) | Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds | hosted | Planet Labs | official | 🟥 paywalled | ⚪ hosted |
 | [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python<br>unknown | Isaac Corley | community | 🟩 open | 🟢 active |
 | [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | local | jpwilson (SkyFi platform) | community | 🟦 commercial | 🟢 active |
-| [SkyWatch MCP](https://docs.skywatch.com/docs/mcp/mcp-server/) | Search SkyWatch's commercial satellite imagery archive (700+ sensors from 25+ providers) in natural language, with provider and pricing reference; results link to SkyWatch Explore for viewing and ordering | hosted | SkyWatch | official | 🟦 commercial | — |
+| [SkyWatch MCP](https://docs.skywatch.com/docs/mcp/mcp-server/) | Search SkyWatch's commercial satellite imagery archive (700+ sensors from 25+ providers) in natural language, with provider and pricing reference; results link to SkyWatch Explore for viewing and ordering | hosted | SkyWatch | official | 🟦 commercial | ⚪ hosted |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python<br>local | BnJam | community | 🟩 open | 🟢 active |
 | [Tilebox MCP Server](https://docs.tilebox.com/onboard-your-agent) | Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents | Python / Go<br>hosted | Tilebox | official | 🟦 commercial | ⚪ hosted |
 | [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python<br>self-hosted | Tryolabs (for UNICEF) | community | 🟦 commercial | 🟢 active |
@@ -185,7 +185,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
-| [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | — |
+| [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
 | [geonode-mcp](https://github.com/christianbraun/geonode-mcp) | Search, edit metadata/permissions, upload datasets and transfer ownership on a GeoNode catalogue, every call made as the logged-in user via OAuth2 | Python<br>self-hosted | Christian Braun | community | 🟩 open | 🟢 active |
 | [mcp-earthscope-fdsn](https://github.com/pipeworx-io/mcp-earthscope-fdsn) | FDSN seismic web services (EarthScope endpoints) — seismometer station metadata, waveform data availability & regional earthquake catalogues | TypeScript<br>local+hosted | Pipeworx (uses EarthScope FDSN services) | community | 🟩 open | 🟢 active |
@@ -198,7 +198,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
 | --- | --- | --- | --- | --- | --- | --- |
 | [ATTOM MCP](https://github.com/pipeworx-io/mcp-attom) | Premium US real-estate & property data from ATTOM Data Solutions — property details, valuations, ownership & sales history | TypeScript<br>local+hosted | Pipeworx (uses ATTOM API) | community | 🟥 paywalled | 🟢 active |
 | [LandRecords.us MCP Server](https://landrecords.us/documentation/mcp-server) | Query 160M+ US land parcels by attribute, address, radius, bbox or GeoJSON polygon — ownership, assessed value, land use, acreage & geometry | hosted | landrecords.us | official | 🟦 commercial | ⚪ hosted |
-| [MAIA MCP](https://www.maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | hosted | MAIA Analytics | official | 🟦 commercial | ⚪ hosted |
+| [MAIA MCP](https://www.maia-analytics.com/docs/mcp/connect) | Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying | hosted | MAIA Analytics | official | 🟦 commercial | 🔴 unreachable |
 | [Regrid MCP Server](https://regrid.com/mcp) | 160M+ US/Canada land parcels — query by location, zoning, acreage, ownership & building criteria | hosted | Regrid | official | 🟦 commercial | ⚪ hosted |
 
 ### Aviation & maritime tracking (ADS-B, AIS)

@@ -1,6 +1,6 @@
 {
   "active_months": 12,
-  "checked": "2026-10-16",
+  "checked": "2026-10-24",
   "servers": {
     "https://api.geobble.com/mcp": {
       "status": "hosted"
@@ -23,6 +23,9 @@
     "https://docs.earthmover.io/mcp/": {
       "status": "hosted"
     },
+    "https://docs.skywatch.com/docs/mcp/mcp-server/": {
+      "status": "hosted"
+    },
     "https://docs.tilebox.com/onboard-your-agent": {
       "status": "hosted"
     },
@@ -33,6 +36,9 @@
       "status": "hosted"
     },
     "https://geoai.tools": {
+      "status": "pending"
+    },
+    "https://geodb.io/connect-ai/": {
       "status": "pending"
     },
     "https://github.com/BnJam/stac-mcp": {
@@ -80,7 +86,7 @@
       "status": "active"
     },
     "https://github.com/OpenCageData/opencage-geocoding-mcp": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/OriShmila/geoapify-mcp-server": {
@@ -144,7 +150,7 @@
       "status": "active"
     },
     "https://github.com/cablate/mcp-google-map": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/cameronking4/google-earth-engine-mcp": {
@@ -296,11 +302,11 @@
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-attom": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-earthscope-fdsn": {
-      "pushed": "2026-09",
+      "pushed": "2026-10",
       "status": "active"
     },
     "https://github.com/pipeworx-io/mcp-maptiler": {
@@ -397,9 +403,12 @@
       "status": "hosted"
     },
     "https://www.maia-analytics.com/docs/mcp/connect": {
-      "status": "hosted"
+      "status": "unreachable"
     },
     "https://www.smarty.com/docs/mcp": {
+      "status": "hosted"
+    },
+    "https://www.zip-codes.com/api/mcp": {
       "status": "hosted"
     },
     "https://zephr.xyz/places-grounding": {
