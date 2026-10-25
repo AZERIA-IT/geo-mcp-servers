@@ -1281,3 +1281,15 @@ servers:
     tags: [satellite-imagery, archive-search, skywatch, earthcache, hosted]
     note: "endpoint https://api.skywatch.co/mcp (guest access, no API key); search only, ordering happens in SkyWatch Explore; also built into Microsoft 365 Copilot"
     added: 2026-10-25
+  - name: Fotoshi MCP
+    access: free
+    url: https://fotoshi.com/developer/mcp
+    description: "Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos"
+    category: data_access
+    author: Fotoshi
+    official: true
+    deployment: hosted
+    vendor_domain: fotoshi.com
+    tags: [photos, geotagged, street-level, stac, cc-by, openstreetmap, attribution, hosted]
+    note: "endpoint https://mcp.fotoshi.com/mcp (OAuth sign-in); photos CC BY 4.0, usable for OpenStreetMap (some institutional photos use a similar open licence); read-only, rate limited, no originals or bulk export; STAC API also available"
+    added: 2026-10-25
