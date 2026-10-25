@@ -29,12 +29,12 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**109 servers tracked** across 12 categories.
+**110 servers tracked** across 12 categories.
 
 _Health checked 2026-10-16 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 23 · ⏳ pending 2 · 🔴 archived 1._
 
 
-_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 49 · 🟥 paywalled 8._
+_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 50 · 🟥 paywalled 8._
 
 ### Categories
 
@@ -42,7 +42,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 49 · 🟥 paywalled 8._
 - [Routing, isochrones & navigation](#routing-isochrones--navigation) (2)
 - [Maps, tiles & commercial platforms](#maps-tiles--commercial-platforms) (19)
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
-- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (16)
+- [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (17)
 - [Weather & climate](#weather--climate) (12)
 - [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
@@ -129,6 +129,7 @@ _Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 49 · 🟥 paywalled 8._
 | [Planet MCP Server (beta)](https://community.planet.com/product-updates/beta-planet-mcp-server-for-ai-agents-6403) | Natural-language search/preview/order over the Planet Insights Platform Data API using existing Planet SDK creds | hosted | Planet Labs | official | 🟥 paywalled | ⚪ hosted |
 | [planetary-computer-mcp](https://github.com/isaaccorley/planetary-computer-mcp) | Query & download satellite imagery from the Microsoft Planetary Computer STAC API | Python<br>unknown | Isaac Corley | community | 🟩 open | 🟢 active |
 | [SkyFi MCP](https://github.com/jpwilson/skyfi-mcp) | Search 150+ satellites from 12+ providers, compare pricing, order archive or tasking imagery in natural language | local | jpwilson (SkyFi platform) | community | 🟦 commercial | 🟢 active |
+| [SkyWatch MCP](https://docs.skywatch.com/docs/mcp/mcp-server/) | Search SkyWatch's commercial satellite imagery archive (700+ sensors from 25+ providers) in natural language, with provider and pricing reference; results link to SkyWatch Explore for viewing and ordering | hosted | SkyWatch | official | 🟦 commercial | — |
 | [stac-mcp](https://github.com/BnJam/stac-mcp) | Natural-language search of any STAC-compliant catalog (defaults to Planetary Computer) | Python<br>local | BnJam | community | 🟩 open | 🟢 active |
 | [Tilebox MCP Server](https://docs.tilebox.com/onboard-your-agent) | Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents | Python / Go<br>hosted | Tilebox | official | 🟦 commercial | ⚪ hosted |
 | [unicef-gee-mcp](https://github.com/tryolabs/unicef-gee-mcp) | Google Earth Engine access/analysis for UNICEF workflows | Python<br>self-hosted | Tryolabs (for UNICEF) | community | 🟦 commercial | 🟢 active |

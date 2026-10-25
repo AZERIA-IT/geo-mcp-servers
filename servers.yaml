@@ -1269,3 +1269,15 @@ servers:
     tags: [zip-codes, postal-codes, address-validation, census, canada, hosted]
     note: "endpoint https://mcp.zip-codes.com/mcp (streamable HTTP); keyless demo mode, free API key (X-Api-Key header) gives 2,500 credits/day; MCP Registry: com.zip-codes/api"
     added: 2026-10-20
+  - name: SkyWatch MCP
+    access: commercial
+    url: https://docs.skywatch.com/docs/mcp/mcp-server/
+    description: "Search SkyWatch's commercial satellite imagery archive (700+ sensors from 25+ providers) in natural language, with provider and pricing reference; results link to SkyWatch Explore for viewing and ordering"
+    category: remote_sensing
+    author: SkyWatch
+    official: true
+    deployment: hosted
+    vendor_domain: skywatch.com
+    tags: [satellite-imagery, archive-search, skywatch, earthcache, hosted]
+    note: "endpoint https://api.skywatch.co/mcp (guest access, no API key); search only, ordering happens in SkyWatch Explore; also built into Microsoft 365 Copilot"
+    added: 2026-10-25
