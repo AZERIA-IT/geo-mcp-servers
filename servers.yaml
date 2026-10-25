@@ -632,7 +632,7 @@ servers:
     added: 2026-09-04
   - name: Tilebox MCP Server
     access: commercial
-    url: https://docs.tilebox.com/onboard-your-agent
+    url: https://tilebox.com/docs/ai/onboard-your-agent
     description: Create and manage geospatial datasets and distributed workflows, with docs search + CLI and Skills for coding agents
     category: remote_sensing
     author: Tilebox

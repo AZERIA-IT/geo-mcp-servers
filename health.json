@@ -26,10 +26,6 @@
     "https://docs.skywatch.com/docs/mcp/mcp-server/": {
       "status": "hosted"
     },
-    "https://docs.tilebox.com/onboard-your-agent": {
-      "moved_to": "https://tilebox.com/docs/ai/onboard-your-agent",
-      "status": "hosted"
-    },
     "https://factori.ai/mcp/": {
       "status": "hosted"
     },
@@ -395,6 +391,9 @@
       "status": "hosted"
     },
     "https://terra-lab.ai/mcp": {
+      "status": "hosted"
+    },
+    "https://tilebox.com/docs/ai/onboard-your-agent": {
       "status": "hosted"
     },
     "https://vexceldata.com/platform/vexcel-mcp/": {
