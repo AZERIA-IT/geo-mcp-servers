@@ -1075,7 +1075,7 @@ servers:
     added: 2026-08-28
   - name: MAIA MCP
     access: commercial
-    url: https://www.maia-analytics.com/docs/mcp/connect
+    url: https://maia-analytics.com/docs/mcp/connect
     description: "Hosted connector that builds US location datasets as map + table projects — parcels, owners, zoning, buildings, businesses & contacts — from plain-language requests, with CSV/GeoJSON import and project querying"
     category: property
     author: MAIA Analytics
