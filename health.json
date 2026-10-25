@@ -27,6 +27,7 @@
       "status": "hosted"
     },
     "https://docs.tilebox.com/onboard-your-agent": {
+      "moved_to": "https://tilebox.com/docs/ai/onboard-your-agent",
       "status": "hosted"
     },
     "https://factori.ai/mcp/": {
@@ -375,6 +376,9 @@
     "https://lgnd.ai/resources/lgnd-geo": {
       "status": "hosted"
     },
+    "https://maia-analytics.com/docs/mcp/connect": {
+      "status": "hosted"
+    },
     "https://manual.giscloud.com/knowledge-base/gis-cloud-ai-mcp/": {
       "status": "hosted"
     },
@@ -401,9 +405,6 @@
     },
     "https://wherobots.com": {
       "status": "hosted"
-    },
-    "https://www.maia-analytics.com/docs/mcp/connect": {
-      "status": "unreachable"
     },
     "https://www.smarty.com/docs/mcp": {
       "status": "hosted"
