@@ -31,7 +31,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 **111 servers tracked** across 12 categories.
 
-_Health checked 2026-10-24 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 25 · ⏳ pending 3 · 🔴 archived 1._
+_Health checked 2026-10-24 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 26 · ⏳ pending 3 · 🔴 archived 1._
 
 
 _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 50 · 🟥 paywalled 8._
@@ -184,7 +184,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 50 · 🟥 paywalled 8._
 | --- | --- | --- | --- | --- | --- | --- |
 | [DC Hub](https://github.com/azmartone67/dchub-mcp-server) | Data-center site selection data — Data Center Power Index (DCPI) daily grid-power availability scores across 300+ markets, plus grid, fiber, gas and interconnection-queue data | JavaScript<br>local+hosted | DC Hub | official | 🟦 commercial | 🟢 active |
 | [Factori MCP](https://factori.ai/mcp/) | Location intelligence from mobility data — POI visits and trends, visitor profiles, market saturation and demographics, for site selection, audience building and out-of-home (OOH) planning | hosted | Factori | official | 🟥 paywalled | ⚪ hosted |
-| [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | — |
+| [Fotoshi MCP](https://fotoshi.com/developer/mcp) | Search public geotagged Fotoshi photos within a bounded area, resolve place names, and get each photo's licence and attribution; signed-in users can also retrieve their own public photos | hosted | Fotoshi | official | 🟨 free | ⚪ hosted |
 | [GeoAI Tools](https://geoai.tools) | Hosted MCP platform bridging AI agents to ArcGIS Online/Enterprise data — 35 tools: service discovery, AI service guides, geocoding, spatial analysis, feature editing & server-side pipelines | hosted | GeoAI Tools | official | 🟦 commercial | ⏳ pending |
 | [geoDB (mineral exploration)](https://geodb.io/connect-ai/) | Hosted remote MCP over a mineral-exploration system of record, reading and writing drill holes, assays, QA/QC, geophysics and claims through a scoped, revocable, logged grant, with dry run, confirm and undo on every write | hosted | geoDB | official | 🟥 paywalled | ⏳ pending |
 | [GeoLens MCP](https://github.com/geolens-io/geolens) | Read-only access to a self-hosted GeoLens instance: catalog search, dataset schemas, GeoJSON features, saved maps & sandboxed read-only SQL | Python<br>local | GeoLens | official | 🟩 open | 🟢 active |
