@@ -29,7 +29,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 
 <!-- AUTOGEN:START -->
 
-**111 servers tracked** across 12 categories.
+**113 servers tracked** across 12 categories.
 
 _Health checked 2026-10-24 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 26 · ⏳ pending 3 · 🔴 archived 1._
 
@@ -44,7 +44,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 50 · 🟥 paywalled 8._
 - [Spatial databases & analytics](#spatial-databases--analytics) (3)
 - [Remote sensing, STAC & earth observation](#remote-sensing-stac--earth-observation) (17)
 - [Weather & climate](#weather--climate) (12)
-- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (9)
+- [Desktop & enterprise GIS (QGIS, ArcGIS)](#desktop--enterprise-gis-qgis-arcgis) (11)
 - [General GIS / geoprocessing toolkits](#general-gis--geoprocessing-toolkits) (7)
 - [Geospatial data access & catalogs](#geospatial-data-access--catalogs) (10)
 - [Parcels & property](#parcels--property) (4)
@@ -158,6 +158,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 50 · 🟥 paywalled 8._
 | --- | --- | --- | --- | --- | --- | --- |
 | [ArcGISMCP](https://github.com/GarrickGarcia/ArcGISMCP) | Integrates ArcGIS Online — search/query geospatial feature layers | Python<br>local | GarrickGarcia | community | 🟦 commercial | 🟡 stale |
 | [esri-mcp](https://github.com/eKerney/esri-mcp) | Query & map Esri Living Atlas data, focus on water resources | Python<br>unknown | eKerney | community | 🟦 commercial | 🟡 stale |
+| [gis-agent-bridges](https://github.com/YUYU20061107/gis-agent-bridges) | Safety-gated MCP bridges for mainstream desktop GIS (SuperMap, ArcGIS Pro/ArcMap, QGIS, GeoScene, MapGIS, ENVI, Global Mapper, FME) - localhost-only, confirm-gated writes, originals read-only, no arbitrary code execution | Python<br>local | YUYU20061107 | community | — | — |
 | [MCP-ArcGISPro](https://github.com/geo2004/MCP-ArcGISPro) | Control and automate ArcGIS Pro from Claude Desktop | Python<br>local | geo2004 | community | 🟥 paywalled | 🟢 active |
 | [MCP-Server-ArcGIS-Pro-AddIn](https://github.com/nicogis/MCP-Server-ArcGIS-Pro-AddIn) | MCP server delivered as an ArcGIS Pro add-in | C#/.NET<br>addin | nicogis | community | 🟥 paywalled | 🟢 active |
 | [qgis-mcp (nkarasiak)](https://github.com/nkarasiak/qgis-mcp) | 117 QGIS tools — layer mgmt, feature editing, processing, styling, layout/atlas, cross-layer SQL | Python<br>local | nkarasiak | community | 🟩 open | 🟢 active |
@@ -165,6 +166,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 50 · 🟥 paywalled 8._
 | [QGIS2OllamaMCP](https://github.com/anitagraser/qgis_mcp) | Lets LLMs (via Ollama) drive QGIS Desktop | Python<br>self-hosted | Anita Graser | community | 🟩 open | 🟢 active |
 | [qgis_mcp](https://github.com/jjsantos01/qgis_mcp) | Links QGIS Desktop to Claude — project setup, layer management, spatial ops via PyQGIS | Python<br>local | jjsantos01 | community | 🟩 open | 🟡 stale |
 | [QgisStreamMCP](https://github.com/nic01asFr/QgisStreamMCP) | Full QGIS Desktop in Docker via noVNC — 1000+ Processing algorithms (Native/GDAL/GRASS/SAGA) | Python<br>local | nic01asFr | community | 🟩 open | 🟢 active |
+| [supermap-gis-bridge](https://github.com/YUYU20061107/supermap-gis-bridge) | MCP bridge for SuperMap iDesktopX - headless inventory/backup on copies plus a live in-app bridge for the open workspace; confirm-gated writes, no arbitrary code execution | Python<br>local | YUYU20061107 | community | — | — |
 
 ### General GIS / geoprocessing toolkits
 

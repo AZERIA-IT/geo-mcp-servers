@@ -216,6 +216,26 @@ servers:
     deployment: unknown
     tags: [esri, living-atlas]
     added: 2026-08-02
+  - name: gis-agent-bridges
+    url: https://github.com/YUYU20061107/gis-agent-bridges
+    description: Safety-gated MCP bridges for mainstream desktop GIS (SuperMap, ArcGIS Pro/ArcMap, QGIS, GeoScene, MapGIS, ENVI, Global Mapper, FME) - localhost-only, confirm-gated writes, originals read-only, no arbitrary code execution
+    category: desktop_gis
+    author: YUYU20061107
+    language: Python
+    official: false
+    deployment: local
+    tags: [gis, desktop-gis, supermap, arcgis, qgis, mcp]
+    added: 2026-10-27
+  - name: supermap-gis-bridge
+    url: https://github.com/YUYU20061107/supermap-gis-bridge
+    description: MCP bridge for SuperMap iDesktopX - headless inventory/backup on copies plus a live in-app bridge for the open workspace; confirm-gated writes, no arbitrary code execution
+    category: desktop_gis
+    author: YUYU20061107
+    language: Python
+    official: false
+    deployment: local
+    tags: [gis, desktop-gis, supermap, mcp]
+    added: 2026-10-27
 
   # ---- Maps, tiles & commercial platforms ----
   - name: Cesium AI Integrations
