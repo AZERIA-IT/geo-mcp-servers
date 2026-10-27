@@ -34,7 +34,7 @@ Then ask Claude things like *"is there an MCP server for STAC imagery?"* or *"tr
 _Health checked 2026-10-24 (active = repo pushed within 12 months): 🟢 active 63 · 🟡 stale 18 · ⚪ hosted 26 · ⏳ pending 3 · 🔴 archived 1._
 
 
-_Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 51 · 🟥 paywalled 8._
+_Access: 🟩 open 48 · 🟨 free 4 · 🟦 commercial 52 · 🟥 paywalled 8._
 
 ### Categories
 
@@ -177,7 +177,7 @@ _Access: 🟩 open 48 · 🟨 free 5 · 🟦 commercial 51 · 🟥 paywalled 8._
 | [Geospatial Power Pack (Kiro)](https://github.com/aws-samples/sample-geospatial-kiro-power-pack) | 19 modular MCP servers with a Kiro hub power — STAC/vector/geocoding connectors, CRS/geometry/raster/point-cloud/3D processing, H3/S2 indexing, and GeoAI embeddings & similarity search over open data on AWS | Python<br>local | AWS | official | 🟩 open | 🟢 active |
 | [gis-mcp](https://github.com/mahdin75/gis-mcp) | Connects LLMs to core GIS libraries (Shapely, PyProj, GeoPandas, Rasterio, PySAL) for geometry, projections, raster & spatial stats | Python<br>local | mahdin75 | community | 🟩 open | 🟢 active |
 | [MapSmith](https://github.com/mapsmith-ai/MapSmith) | Deterministic GIS geoprocessing for AI agents — buffers, overlays, reprojection, zonal stats, terrain & hydrology (GeoPandas/DuckDB/Whitebox), with a verifiable provenance manifest on every output | Python<br>local | mapsmith-ai | community | 🟩 open | 🟢 active |
-| [TerraLab MCP](https://terra-lab.ai/mcp) | Hosted geospatial tools on open data — geocoding, coordinate conversion, elevation/contours, open map-data extracts, GIS file reading/conversion & French cadastral parcels, each result naming its sources & licences | hosted | TerraLab | official | 🟨 free | ⚪ hosted |
+| [TerraLab MCP](https://terra-lab.ai/mcp) | Geodata for any place, inside your agent: map data extracts, terrain and contours, routes and travel-time areas, satellite images, population, natural risks, GIS file conversion and French cadastral parcels, each result naming its sources & licences | hosted | TerraLab | official | 🟦 commercial | ⚪ hosted |
 
 ### Geospatial data access & catalogs
 
