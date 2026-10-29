@@ -1305,3 +1305,14 @@ servers:
     tags: [photos, geotagged, street-level, stac, cc-by, openstreetmap, attribution, hosted]
     note: "endpoint https://mcp.fotoshi.com/mcp (OAuth sign-in); photos CC BY 4.0, usable for OpenStreetMap (some institutional photos use a similar open licence); read-only, rate limited, no originals or bulk export; STAC API also available"
     added: 2026-10-25
+  - name: Pluia (PLU IA) MCP Server
+    access: commercial
+    url: https://github.com/AZERIA-IT/pluia
+    description: French zoning (PLU) for any address or parcel in France, rules cited with the official PDF page
+    category: property
+    author: AZERIA IT
+    deployment: hosted
+    vendor_domain: pluia.fr
+    tags: [france, zoning, plu, urban-planning, cadastral-parcel, hosted]
+    note: "endpoint https://pluia.fr/mcp (Streamable HTTP, OAuth 2.1 or API key with a Pluia account); free plan with quotas; the repository holds documentation and client config examples only, the service is not open source"
+    added: 2026-10-29
